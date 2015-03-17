@@ -1,0 +1,448 @@
+<!--# layout("/view/include/layout.html", {cur: 'home'}) { -->
+<div id="main">
+
+	<!-- 轮播图片 -->
+	<div class="focus fr">
+	    <!--# if(LBADPage.totalRow!0 > 0) { -->
+	    <div class="hd" style="width: ${LBADPage.totalRow!0 * 12 + 21}px; left: ${(751 - LBADPage.totalRow!0 * 12) / 2}px}">
+	        <ul>
+	        	
+	        </ul>
+	    </div>
+	    <!--# } -->
+	    <div class="bd">
+	        <ul>
+	            <!--# for(ad in LBADPage.list![]) { -->
+	            <li><a href="${ctxPath}/rest/redirect?target=${ad.url!'#'}" target="_blank"><img
+	                    src="${ctxPath}/rest/image/${ad.image!}"/></a></li>
+	            <!--# } -->
+	        </ul>
+	    </div>
+	    <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a>
+	</div>
+	
+	<div class="blank"></div>
+	<!-- 行程定制 -->
+	<div class="banner218240 fl">
+	    <a href="${ctxPath}/custom/index" target="_blank">
+	        <img src="${ctxPath}/resource/images/demo/banner218267.png" width="216" height="238" alt=""/>
+	    </a>
+	</div>
+	
+	<!-- 美食美景四方块链接 -->
+	<div class="bannerAdClound fl">
+	    <!--
+	    <div class="announcementWrap">
+	        <ul class="clearfix">
+	            <li>双"蛋"特惠行动<i></i></li>
+	            <li>2013芝加哥，佛罗里达及东加勒比海<i></i></li>
+	            <li>双"蛋"特惠行动<i></i></li>
+	        </ul>
+	    </div>
+	    -->
+	    <div class="bannerAdCloundPic">
+	        <ul class="clearfix">
+	            <li><a href="${ctxPath}/play/eat" target="_blank"><img
+	                    src="${ctxPath}/resource/images/bannerAdCloundPic1.png" width="271" height="133" alt=""/></a></li>
+	            <li><a href="${ctxPath}/play/go" target="_blank"><img
+	                    src="${ctxPath}/resource/images/bannerAdCloundPic2.png" width="271" height="133" alt=""/></a></li>
+	            <li><a href="${ctxPath}/play/like" target="_blank"><img
+	                    src="${ctxPath}/resource/images/bannerAdCloundPic3.png" width="271" height="133" alt=""/></a></li>
+	            <li><a href="${ctxPath}/play/buy" target="_blank"><img
+	                    src="${ctxPath}/resource/images/bannerAdCloundPic4.png" width="271" height="133" alt=""/></a></li>
+	        </ul>
+	    </div>
+	</div>
+	
+	<!-- 工具箱 -->
+	<div class="toolsBar fl">
+	    <h3 class="fntYh">旅游工具箱</h3>
+	    <ul class="toolList clearfix">
+	        <li class="map"><a href="http://map.baidu.com/?newmap=1&s=s%26wd%3D云南地图%26c%3D28&fr=alac0&from=alamap"
+	                           title="电子地图" target="_blank">电子地图</a></li>
+	        <li class="weather"><a href="http://www.weather.com.cn/html/province/yunnan.shtml" title="天气预报" target="_blank">天气预报</a>
+	        </li>
+	        <li class="bus"><a href="http://www.buscx.cn/s.php/31.html" title="公交查询" target="_blank">公交查询</a></li>
+	        <li class="tips"><a href="#" title="旅游常识" target="_blank">旅游常识</a></li>
+	    </ul>
+	    <h4 class="fntYh"><a href="${ctxPath}/login">免费订阅促销信息</a></h4>
+	    <ul class="toolsEW clearfix">
+	        <li class="wx">微信客服</li>
+	        <li class="zx">实用资讯</li>
+	    </ul>
+	</div>
+	<div class="blank"></div>
+	<!--# if(!empty("HF1AD")) { -->
+	<div class="banner100090"><a href="${HF1AD.url}" target="_blank"><img src="${ctxPath}/rest/image/${HF1AD.image!}"/></a>
+	</div>
+	<div class="blank"></div>
+	<!--# } -->
+	<!-- 特惠促销 -->
+	<div class="privilegeWrap">
+	    <div class="floorTitle clearfix">
+	        <div class="monthCat fr">
+	            <ul class="clearfix">
+	                <li>1月</li>
+	                <li>2月</li>
+	                <li>3月</li>
+	                <li>4月</li>
+	                <li>5月</li>
+	                <li>6月</li>
+	                <li>7月</li>
+	                <li>8月</li>
+	                <li>9月</li>
+	                <li>10月</li>
+	                <li>11月</li>
+	                <li>12月</li>
+	            </ul>
+	        </div>
+	        <h3 class="f1">特惠促销</h3>
+	    </div>
+	    <div class="privilegeList">
+	        <ul class="clearfix">
+	            <!--# for(goods in discountGoodsPage.list![]) { -->
+	            <a href="${ctxPath}/detail/${goods.id}">
+	                <h2>${goods.name}</h2>
+	                <h6>${(goods.minRealPrice!0) / 100}<span></span></h6>
+	            </a>
+	            <!--# } -->
+	        </ul>
+	    </div>
+	</div>
+	
+	<!-- 热门线路推荐 -->
+	<div class="hotLineWrap clearfix">
+	    <div class="floorTitle clearfix">
+	        <div class="floorTitleRtLinks fr">
+	            <!--# var totalHotLineLabel = 0; -->
+	            <!--# for(label in hotLineLabelPage.list![]) { -->
+	            <!--# for(child in label.children![]) { -->
+	            <!--# if(totalHotLineLabel < 11) { -->
+	            <a href="${ctxPath}/line?label=${child.name}">${child.name}</a>
+	            <!--# totalHotLineLabel = totalHotLineLabel + 1; -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# if(totalHotLineLabel!0 > 0) { -->
+	            <a href="${ctxPath}/line">更多&gt;&gt;</a>
+	            <!--# } -->
+	        </div>
+	        <h3 class="f2">热门旅游线路推荐</h3>
+	    </div>
+	    <!--# for(goods in hotLineGoodsPage.list![]) { -->
+	    <div class="hotLineWrapItem">
+	        <a href="${ctxPath}/detail/${goods.id}"><img class="proPic autoZoom lazy"
+	                                                     data-original="${ctxPath}/rest/image/${goods.master!}" width="236"
+	                                                     height="236"/></a>
+	
+	        <h2><i></i><a href="${ctxPath}/detail/${goods.id}" target="_blank"
+	                      style="height: 20px; width: 150px;"
+	                      title="${goods.name}">${goods.name}</a></h2>
+	        <ul class="clearfix">
+	            <h6>￥${(goods.minRealPrice!0) / 100}<i></i></h6>
+	            <!--# if(goods.recommend!0 > 0) { -->
+	            <li>推荐指数：<img src="${ctxPath}/resource/images/starOrg${goods.recommend!0}.gif"/></li>
+	            <!--# } -->
+	        </ul>
+	    </div>
+	    <!--# } -->
+	</div>
+	
+	<!-- 特价酒店-->
+	<div class="hotelWrap clearfix">
+	    <div class="floorTitle clearfix">
+	        <div class="floorTitleRtLinks fr">
+	            <!--# var totalHotHotelLabel = 0; -->
+	            <!--# for(label in hotHotelLabelPage.list![]) { -->
+	            <!--# for(child in label.children![]) { -->
+	            <!--# if(totalHotHotelLabel < 11) { -->
+	            <a href="${ctxPath}/hotel?label=${child.name}">${child.name}</a>
+	            <!--# totalHotHotelLabel = totalHotHotelLabel + 1; -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# if(totalHotHotelLabel!0 > 0) { -->
+	            
+	            <a href="${ctxPath}/hotel">更多&gt;&gt;</a>
+	            <!--# } -->
+	        </div>
+	        <h3 class="f3">特价酒店推荐</h3>
+	    </div>
+	    <!--# if(hotHotelGoodsPage.list.~size!0 > 4) { -->
+	    <div class="hotelListTxt fr">
+	        <!--# for(goods in hotHotelGoodsPage.list![]) { -->
+	        <div class="hotelListTxtItem">
+	            <ul>
+	                <h2><a href="${ctxPath}/detail/${goods.id}" target="_blank"
+	                       style="width: 120px;overflow: hidden; display: block; height: 25px;">${goods.name}</a> <img
+	                        src="${ctxPath}/resource/images/starBlue${goods.recommend!0}.gif"/></h2>
+	            </ul>
+	            <ol>
+	                <a href="${ctxPath}/detail/${goods.id}" target="_blank">
+	                    <img class="miniPic autoZoom lazy" data-original="${ctxPath}/rest/image/${goods.master!}" width="60"
+	                         height="40"/></a>
+	
+	                <h2><a href="${ctxPath}/detail/${goods.id}" target="_blank">${goods.name}</a></h2>
+	            </ol>
+	        </div>
+	        <!--# } -->
+	    </div>
+	    <!--# } -->
+	    <div class="hotelListPic f1">
+	        <ul class="clearfix">
+	            <!--# if(JD1AD.id!'' != '') { -->
+	            <li><a href="${JD1AD.url}" target="_blank">
+	                <img data-original="${ctxPath}/rest/image/${JD1AD.image!}" class="autoZoom lazy" width="440"
+	                     height="320"/></a><span></span>
+	
+	                <h2><a href="${JD1AD.url}" target="_blank">${JD1AD.name}</a></h2>
+	            </li>
+	            <!--# } -->
+	            <!--# if(JD2AD.id!'' != '') { -->
+	            <li><a href="${JD2AD.url}" target="_blank">
+	                <img data-original="${ctxPath}/rest/image/${JD2AD.image!}" class="autoZoom lazy" width="164"
+	                     height="158"/></a><span></span>
+	
+	                <h2><a href="${JD2AD.url}" target="_blank">${JD2AD.name}</a></h2>
+	            </li>
+	            <!--# } -->
+	            <!--# if(JD3AD.id!'' != '') { -->
+	            <li><a href="${JD3AD.url}" target="_blank"><img
+	                    data-original="${ctxPath}/rest/image/${JD3AD.image!}" class="autoZoom lazy" width="164"
+	                    height="158"/></a><span></span>
+	
+	                <h2><a href="${JD3AD.url}" target="_blank">${JD3AD.name}</a></h2>
+	            </li>
+	            <!--# } -->
+	            <!--# if(JD4AD.id!'' != '') { -->
+	            <li><a href="${JD4AD.url}" target="_blank"><img
+	                    data-original="${ctxPath}/rest/image/${JD4AD.image!}" class="autoZoom lazy" width="330"
+	                    height="160"/></a><span></span>
+	
+	                <h2><a href="${JD4AD.url}" target="_blank">${JD4AD.name}</a></h2>
+	            </li>
+	            <!--# } -->
+	        </ul>
+	    </div>
+	</div>
+	
+	
+	<div class="blank"></div>
+	<!--# if(!empty("HF2AD")) { -->
+	<div class="banner100090"><a href="${HF2AD.url}" target="_blank"><img src="${ctxPath}/rest/image/${HF2AD.image!}"/></a>
+	</div>
+	<div class="blank"></div>
+	<!--# } -->
+	<div class="blank"></div>
+	
+	<!-- 景区门票推荐 -->
+	<div class="ticketWrap clearfix">
+	    <div class="floorTitle clearfix">
+	        <div class="floorTitleRtLinks fr">
+	            <a href="${ctxPath}/ticket">热门景区门票排行</a>
+	            <!--# var totalHotTicketLabel = 0; -->
+	            <!--# for(label in hotTicketLabelPage.list![]) { -->
+	            <!--# for(child in label.children![]) { -->
+	            <!--# if(totalHotTicketLabel < 4) { -->
+	            <a href="${ctxPath}/ticket?label=${child.name}">${child.name}</a>
+	            <!--# totalHotTicketLabel = totalHotTicketLabel + 1; -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# if(totalHotTicketLabel!0 > 0) { -->
+	            <a href="${ctxPath}/ticket">更多&gt;&gt;</a>
+	            <!--# } -->
+	        </div>
+	        <h3 class="f4">景区门票推荐</h3>
+	    </div>
+	    <!--# if(hotTicketGoodsPage.list.~size!0 > 0) { -->
+	    <div class="ticketListItemAllWrap">
+	
+	        <div class="ticketListItem clearfix">
+	            <!--# for(goods in hotTicketGoodsPage.list![]) { -->
+	            <!--# if(goods_index < 3) { -->
+	            <div class="ticketListChildItem">
+	                <ul class="clearfix">
+	                    <!--# var pi = 0; -->
+	                    <!--# while(pi < 4) { -->
+	                    <li>
+	                        <!--# if(goods.pics.~size > pi) { -->
+	                        <span><img data-original="${ctxPath}/rest/image/${goods.pics[pi]!}" class="autoZoom lazy"
+	                                   width="167" height="167"/></span>
+	                        <!--# } else { -->
+	                        <span><img data-original="${ctxPath}/rest/image/" class="autoZoom lazy" width="167"
+	                                   height="167"/></span>
+	                        <!--# } -->
+	                        <div class="ticketListChildItemDetail">
+	                            <a href="javascript:void(0)">
+	                                <!--# if(goods.pics.~size > pi) { -->
+	                                <img class="big autoZoom" src="${ctxPath}/rest/image/${goods.pics[pi]!}" width="330"
+	                                     height="330"/>
+	                                <!--# } else { -->
+	                                <img src="${ctxPath}/rest/image/" class="big autoZoom" width="330" height="330"/>
+	                                <!--# } -->
+	                            </a>
+	                            <i class="bg"></i>
+	
+	                            <h2><i>￥${(goods.minRealPrice!0) / 100}<font></font></i><a
+	                                    href="${ctxPath}/detail/${goods.id}">${goods.name}</a></h2>
+	                            <ol class="intro">${goods.caption}</ol>
+	                        </div>
+	                    </li>
+	                    <!--# pi = pi + 1; -->
+	                    <!--# } -->
+	                </ul>
+	            </div>
+	            <!--# } -->
+	            <!--# } -->
+	        </div>
+	    </div>
+	    <!--# } -->
+	    <!--# if(hotTicketGoodsPage.totalRow!hotTicketGoodsPage.list.~size!0 > 7) { -->
+	    <div class="ticketListItemPages">
+	        <ul></ul>
+	        <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a>
+	    </div>
+	    <!--# } -->
+	</div>
+	
+	
+	<div class="blank"></div>
+	
+	<!-- 租车特价 -->
+	<div class="carWrap clearfix">
+	    <div class="floorTitle clearfix">
+	        <div class="floorTitleRtLinks fr">
+	            <!--# var totalHotCarLabel = 0; -->
+	            <!--# for(label in hotCarLabelPage.list![]) { -->
+	            <!--# for(child in label.children![]) { -->
+	            <!--# if(totalHotCarLabel < 5) { -->
+	            <a href="${ctxPath}/car?label=${child.name}">${child.name}</a>
+	            <!--# totalHotCarLabel = totalHotCarLabel + 1; -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# if(totalHotCarLabel!0 > 0) { -->
+	            <a href="${ctxPath}/car">更多&gt;&gt;</a>
+	            <!--# } -->
+	        </div>
+	        <h3 class="f5">特价租车</h3>
+	    </div>
+	    <!--# if(hotCarGoodsPage.list.~size!0 > 4) { -->
+	    <div class="carListLogo fr">
+	        <div class="carListLogoCloud clearfix">
+	            <!--# for(goods in hotCarGoodsPage.list![]) { -->
+	            <!--# if(goods_index > 3) { -->
+	            <!--# if((goods_index - 4) % 8 == 0) { -->
+	            <ul class="clearfix">
+	                <!--# } -->
+	                <li><a href="${ctxPath}/detail/${goods.id}" target="_blank"><img
+	                        src="${ctxPath}/rest/image/${goods.master!}" class="autoZoom"/></a></li>
+	                <!--# if((goods_index - 4) % 8 == 7 || (goods_index + 1) == hotCarGoodsPage.totalRow!hotCarGoodsPage.list.~size!0) { -->
+	            </ul>
+	            <!--# } -->
+	            <!--# } -->
+	            <!--# } -->
+	        </div>
+	        <!--# if(hotCarGoodsPage.list.~size!0 > 12) { -->
+	        <div class="carListLogoCloudPages">
+	            <ul></ul>
+	        </div>
+	        <!--# } -->
+	    </div>
+	    <!--# } -->
+	    <!--# if(hotCarGoodsPage.list.~size!0 > 0) { -->
+	    <div class="carListPic f1">
+	        <ul class="clearfix">
+	            <!--# for(goods in hotCarGoodsPage.list![]) { -->
+	            <!--# if(goods_index < 4) { -->
+	            <li><a href="${ctxPath}/detail/${goods.id}" target="_blank"><img
+	                    src="${ctxPath}/rest/image/${goods.master!}" class="autoZoom"/></a><span></span>
+	
+	                <h2><i>￥${(goods.minRealPrice!0) / 100}<font></font></i><a href="${ctxPath}/detail/${goods.id}"
+	                                                                           target="_blank">${goods.name}</a></h2>
+	            </li>
+	            <!--# } -->
+	            <!--# } -->
+	        </ul>
+	    </div>
+	    <!--# } -->
+	</div>
+	
+</div>
+
+<div class="bottomBanner">
+    <!--# if(!empty("HF3AD")) { -->
+    <div class="banner100090"><a href="${HF3AD.url}" target="_blank"><img src="${ctxPath}/rest/image/${HF3AD.image!}"/></a>
+    </div>
+    <!--# } -->
+    <div class="siteIntro">
+        <ul class="clearfix">
+            <li>自助游领跑者<span>门票 酒店 交通一步到位</span></li>
+            <li>万家景区深度合作<span>价格更低 品质更高</span></li>
+            <li>7x24小时服务<span>快速响应 全年无休</span></li>
+        </ul>
+    </div>
+</div>
+
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/month.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        $("#siderCat").show();
+        $(".focus").slide({titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, delayTime: 1000});
+        var privilegeListItem = $("div.privilegeList").find("a"),
+                privilegeListItemMid = $("div.privilegeList").find("a:eq(1),a:eq(4),a:eq(7)");
+        $(privilegeListItemMid).addClass("mid");
+        $(privilegeListItem).hover(function () {
+            $(this).addClass("hover");
+        }, function () {
+            $(this).removeClass("hover");
+        });
+        var hotLineWrapItem = $(".hotLineWrap").find(".hotLineWrapItem");
+        $(hotLineWrapItem).each(function (i) {
+            if ((i + 1) % 4 == 0) {
+                $(this).addClass("hotLineWrapItemNoMg");
+            }
+        }).hover(function () {
+                    $(this).addClass("hotLineWrapItemHov");
+                }, function () {
+                    $(this).removeClass("hotLineWrapItemHov");
+                });
+        $(".hotelListPic").find("li").each(function (i) {
+            $(this).addClass("item" + (i + 1));
+        });
+        $(".carListPic").find("li").each(function (i) {
+            $(this).addClass("item" + (i + 1));
+        });
+        $(".hotelListTxt").children().each(function () {
+            $(this).hover(function () {
+                $(this).addClass("hotelListTxtItemHov").siblings().removeClass("hotelListTxtItemHov").find('img').trigger('resize');
+
+            });
+        }).first().addClass("hotelListTxtItemHov");
+        $(".carListLogo").slide({titCell: ".carListLogoCloudPages ul", mainCell: ".carListLogoCloud", effect: "leftLoop", autoPage: true});
+
+        $(".ticketListItem").find("li>span>img").each(function () {
+            $(this).hover(function () {
+                $(this).parent().siblings("div").show();
+                $(this).parent().parents(".ticketListChildItem").siblings().find(".ticketListChildItemDetail").hide();
+                $(this).parent().parents(".ticketListItem").siblings().find(".ticketListChildItemDetail").hide();
+            });
+            $(this).parent().siblings("div").hover(function () {
+            },function () {
+                $(this).hide();
+            }).click(function () {
+                        location.href = $(this).find('h2>a').attr('href');
+                    });
+        });
+        $(".ticketWrap").slide({titCell: ".ticketListItemPages ul", mainCell: ".ticketListItemAllWrap", effect: "leftLoop", autoPage: true});
+        $('.ticketListItemPages').width($('.ticketListItemPages ul li').length * 13 + 11);
+        $('.carListLogoCloudPages').width($('.carListLogoCloudPages ul li').length * 13 + 11);
+    });
+</script>
+</body>
+</html>

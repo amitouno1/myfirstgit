@@ -1,0 +1,140 @@
+<!--# layout("/manage/include/layout.html") { -->
+<div class="container" data-module="goods.pj" id="goods">
+
+	<div class="panel-heading">
+		<!--# include("/manage/goods/pj/list.action.html") {} -->
+	</div>
+
+    <div class="row" style="margin-top:20px;">
+        <div class="col-xs-1" style="position: relative">
+            <div style="position: fixed; top:80px; width: 53px">
+                <a href="${ctxPath}/manage/goods" class="btn btn-default btn-sm btn-block">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-11">
+            <form action="${ctxPath}/manage/goods/save" role="form" class="form-horizontal">
+                <input type="hidden" name="id" value="${goods.id!}">
+                
+                <!--# for(pj in pjList.list![]) { -->
+                <!--# var i=0; -->
+                <div class="panel-body">
+	                <div class="form-group">
+                	   <!--<label class="col-xs-2 control-label">评价编号</label>
+			           <div class="col-xs-10"><input class="form-control" id="id"  value="${pj.id}" readOnly="true"></div>-->
+	                   <label class="col-xs-2 control-label">评价用户</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_username" value="${pj.memberObject.username}" readOnly="true"></div>
+			           <!--<label class="col-xs-2 control-label">订单编号</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_orderid" value="${pj.orderid}" readOnly="true"></div>-->
+			           <label class="col-xs-2 control-label">评价日期</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_pjDate" value="${pj.pjDate}" readOnly="true"></div>
+			           <label class="col-xs-2 control-label">服务质量</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_fwzl" value="${pj.fwzl}"></div>
+			           <label class="col-xs-2 control-label">行程安排</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_xcap" value="${pj.xcap}"></div>
+			           <label class="col-xs-2 control-label">食宿品质</label>
+			           <div class="col-xs-10"><input class="form-control" id="${pj.id}_sspz" value="${pj.sspz}"></div>
+
+			           <button type="button" class="btn btn-primary btn-block " style="margin: 20px 20px" id="${pj.id}" onclick="save(this.id)">保存</button>
+			        </div>
+		        </div>
+		        <!--# i=i+1; -->
+		        <!--# } -->
+  
+            </form>
+        </div>
+    </div>
+    
+    
+    <div class="panel-footer">
+   		 <div class="row">
+    
+	    	<div class="col-xs-2" >
+		       
+		    </div>
+	    
+	        <div class="col-xs-6" >
+		       
+		    </div>
+	           
+	        <div class="col-xs-4" >
+		        <ul class="pagination pagination-sm pull-right" style="margin-left: 10px;">
+		            <!--# if(pjList.pageNumber!1 > 1) {-->
+		            <li class="previous"><a
+		                    href="${ctxPath}/manage/goods?op=pj&id=${goods.id}&pageNumber=${pjList.pageNumber - 1}">上一页</a>
+		            </li>
+		            <!--# } else { -->
+		            <li class="previous disabled"><span>上一页</span></li>
+		            <!--# } -->
+		            <!--# if(pjList.pageNumber < pjList.totalPage) { -->
+		            <li class="next"><a
+		                    href="${ctxPath}/manage/goods?op=pj&id=${goods.id}&pageNumber=${pjList.pageNumber + 1}">下一页</a>
+		            </li>
+		            <!--# } else { -->
+		            <li class="next disabled"><span>下一页</span></li>
+		            <!--# } -->
+		        </ul>
+	
+	        </div>
+	     </div>
+    </div>
+    
+</div>
+
+
+<script type="text/javascript" src="${ctxPath}/resource/js/jquerymin.js"></script>
+<script>
+	function save(value)
+	{
+
+		var id=value;
+		var fwzl=document.getElementById(value+"_fwzl").value;
+		var xcap=document.getElementById(value+"_xcap").value;
+		var sspz=document.getElementById(value+"_sspz").value;
+		
+		if(parseInt(fwzl)>5||parseInt(fwzl)<=0)
+		{
+			alert("服务质量修改值在1-5之间");
+			return;
+		}
+		
+		if(parseInt(xcap)>5||parseInt(xcap)<=0)
+		{
+			alert("行程安排修改值在1-5之间");
+			return;
+		}
+		
+		if(parseInt(sspz)>5||parseInt(sspz)<=0)
+		{
+			alert("食宿品质修改值在1-5之间");
+			return;
+		}
+
+		var datas={id: id, fwzl: fwzl,xcap:xcap,sspz:sspz};
+
+		 $.ajax({
+            url:'/manage/goods/savepj',
+            type: "POST",
+            data: datas,
+            success: function (res) {
+                if (res.success) {
+                    //location.reload();
+                    alert("保存成功");
+                }
+            }
+        });
+		
+	}
+	
+	
+	function search()
+	{
+		var username_search=document.getElementById("username_search").value;
+	
+		window.location.href="${ctxPath}/manage/goods?op=pj&id=${goods.id}&username_search="+username_search;
+	}
+
+</script>
+
+<!--# } -->

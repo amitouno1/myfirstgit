@@ -1,0 +1,55 @@
+<div class="panel panel-default list">
+    <div class="panel-heading clearfix">
+        <!--# include("/manage/goods/comment/list.action.html") {} -->
+    </div>
+    <div class="panel-body">
+        <!--# for(comment in commentPage.list![]) { -->
+        <div class="item clearfix" data-id="${comment.id}">
+            <ul class="media-list">
+                <li class="media">
+                    <a class="pull-left">
+                        <img  src="${ctxPath}/rest/image/${comment.member.header!''}" width="64" height="64">
+                    </a>
+                  
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                        	 产品名称:&nbsp;${comment.goodsObject.name!}</br>
+                        	 用户:&nbsp;&nbsp;${comment.member.username!}</br>
+                                                                                                   联系方式:&nbsp;&nbsp;${comment.phone!}</br>
+                                                                                                   咨询内容:&nbsp;&nbsp;${comment.content}</br>
+                                                                                                   咨询时间:&nbsp;&nbsp;${comment.commentDate}</br>
+                                                                                                   回复内容:<textarea class="form-control" rows="3" name="replyContent" id="${comment.id}replyContent" data-id="aaa">${comment.replyContent!''}</textarea>
+                            <small style="padding-left: 10px;" >
+                            	<div  data-id="${comment.id}">
+	                                <a href="${ctxPath}/manage/goods/comment" class="btn btn-link btn-sm reply" style="padding: 2px;">回复</a>
+	                                <a href="${ctxPath}/manage/goods/delComment/${comment.id}" class="btn btn-link btn-sm" style="padding: 2px">删除</a>
+                                </div>
+                                
+                            </small>
+                        </h4>
+                       
+                        <!--# if(comment.reply.id!'' != '') { -->
+                        
+                        <li class="media">
+                            <a class="pull-left">
+                                <img class="media-object" src="${ctxPath}/rest/image/" width="64" height="64">
+                            </a>
+
+                            <div class="media-body">
+                                <h4 class="media-heading">${comment.member.username}</h4>
+                                ${comment.reply.content}
+                            </div>
+                        </li>
+                        <!--# } -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--# } elsefor { -->
+        <div class="empty"></div>
+        <!--# } -->
+    </div>
+    <div class="panel-footer clearfix">
+        <!--# include("/manage/goods/comment/list.action.html") {} -->
+    </div>
+</div>

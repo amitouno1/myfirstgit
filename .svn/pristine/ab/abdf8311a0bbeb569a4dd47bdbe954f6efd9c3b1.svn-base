@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>【假日风光】云南旅游，丽江旅游，云南自助游，旅游资讯，云南地图，云南旅游景点，云南旅游攻略-假日风光</title>
+    <meta name="keywords" content="云南旅游  丽江旅游  云南自助游  云南旅游地图  云南旅游景点"/>
+    <meta name="description"
+          content="假日风光（www.jiarifengguang.com）提供云南旅游，丽江旅游，云南自助游，旅游资讯，云南地图，云南旅游景点等信息，比云南旅游攻略更全的云南旅游必看资讯。假日风光，云南旅游资讯第一平台。"/>
+    <link href="${ctxPath}/resource/css/main.css" rel="stylesheet" type="text/css">
+    <!--# if (cur!'' == 'custom') { -->
+    <link href="${ctxPath}/resource/css/custom.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'custom.other') { -->
+    <link href="${ctxPath}/resource/css/meetingGroup.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'play') { -->
+    <link href="${ctxPath}/resource/css/rimPart.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'cart') { -->
+    <link href="${ctxPath}/resource/css/cart.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'food') { -->
+    <link href="${ctxPath}/resource/css/style.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <link href="${ctxPath}/resource/css/ui/juimin.css" rel="stylesheet" type="text/css">
+    <link href="${ctxPath}/resource/css/square/orange.css" rel="stylesheet" type="text/css">
+    <!--# if (cur!'' == 'detail-line') { -->
+    <link href="${ctxPath}/resource/css/css.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctxPath}/resource/css/qh.css" type="text/css" rel="stylesheet"/>
+    <!--# } -->
+</head>
+
+<!--# if(cur!'' == 'home') { -->
+<body onLoad="monthCurrent();">
+<!-- # } else { -->
+<body>
+<!--# } -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-11803261-8', 'jiarifengguang.com');
+    ga('send', 'pageview');
+
+</script>
+<!--# if (cur!'' == 'custom') { -->
+<div id="wrapSpc">
+<!--# } else { -->
+<div id="wrap">
+<!--# } -->
+<div id="header" class="clearfix">
+<div class="topBar">
+    <div class="topBarLeft fl">
+        <ul>
+            <li class="item1">关注我们：</li>
+            <li class="item2" id="btnOpenWx"><a href="javascript:void(0)">加微信</a>
+                <ul>
+                    <li><img src="${ctxPath}/resource/images/erwSml.png" width="128" height="128" alt="假日风光微信二维码"/></li>
+                    <h6>扫描关注我们</h6>
+                </ul>
+            </li>
+            <li class="item3" id="btnOpenWb" style="position: relative"><a href="javascript:void(0)">加微博</a>
+                <ul style="display: none;">
+                    <li><img src="${ctxPath}/resource/images/weibo.jpg" width="128" height="128" alt="假日风光微博二维码"/></li>
+                    <h6>扫描关注我们</h6>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="topBarMid fl">
+        <ul>
+            <li class="item1">热线电话</li>
+            <li class="item2">${ui400.value!}</li>
+        </ul>
+    </div>
+    <div class="topBarRight fr">
+        <ul>
+            <li>
+                <!--# if(empty('member') ){ -->
+                <a href="${ctxPath}/login">[登陆]</a>
+                <!--# if(cur!'' == 'home') { -->
+                <a href="${ctxPath}/sign?redirect=/user/info">[注册]</a>
+                <!--# } else { -->
+                <a href="${ctxPath}/sign?redirect=${cururl}">[注册]</a>
+                <!--# } -->
+                <a href="${ctxPath}/cart" class="cartTop fntGray">购物车</a><i
+                    class="cartTotal">${cartList.~size!0}</i>
+                <!--# } else { -->
+                <a href="${ctxPath}/user/order">${member.username}</a> |
+                <a href="${ctxPath}/user/order" class="fntGray">查询订单</a> |
+                <a href="${ctxPath}/cart" class="cartTop fntGray">购物车</a><i class="cartTotal">${member.cart.~size!0}</i>
+                |
+                <a href="${ctxPath}/logout">[退出]</a>
+                <!--#  }-->
+            </li>
+        </ul>
+    </div>
+</div>
+<h1><a href="${ctxPath}" title="假日风光">假日风光</a></h1>
+
+<div class="search fl" style="width: 382px">
+    <div class="searchForm clearfix">
+        <form id="queryInput" action="${ctxPath}/all">
+            <div class="searchFormInputTxt">
+                <input type="text" value="请输入目的地名称或关键字" class="inputSearch" name="key">
+            </div>
+            <input type="submit" value="搜索" class="btnSearch">
+        </form>
+    </div>
+    <div class="searchKeywords">
+        热门：
+        <!--# for(target in targetPage.list![]) { -->
+        <a href="${ctxPath}/line?target=${target.name}">${target.name}</a>
+        <!--# } -->
+    </div>
+</div>
+<div class="topTipNew fr"></div>
+<div class="menu clearfix">
+    <div class="menuCat fl" id="menuCat">
+        <h6>全部旅游产品分类</h6>
+
+        <div class="siderCat" id="siderCat">
+            <div class="siderCatItem">
+                <h3>云南跟团游</h3>
+                <ol>
+                    <!--# for(lineLabel in lineLabelPage.list![]) { -->
+                    <!--# if(lineLabel_index < 3) { -->
+                    <a href="${ctxPath}/line">${lineLabel.name!}</a>
+                    <!--# } -->
+                    <!--# } -->
+                </ol>
+                <div class="siderCatItemMain clearfix">
+                    <div class="siderCatItemMainLeft fl">
+                        <!--
+                        <div class="topRecommend">
+                            <ul class="clearfix">
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                            </ul>
+                        </div>
+                        -->
+                        <div class="catListWrap">
+                            <!--# for(lineLabel in lineLabelPage.list![]) { -->
+                            <ul class="clearfix">
+                                <h4>${lineLabel.name}</h4>
+                                <li class="allCat"><a href="${ctxPath}/line">全部</a></li>
+                                <!--# for(child in lineLabel.children![]) { -->
+                                <li><a href="${ctxPath}/line?label=${child.name}">${child.name}</a></li>
+                                <!--# } -->
+                            </ul>
+                            <!--# } -->
+                        </div>
+                    </div>
+                    <div class="siderCatItemMainRight fr">
+                        <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            <div class="siderCatItem">
+                <h3>云南自由行</h3>
+                <ol>
+                    <a href="${ctxPath}/hotel">酒店</a> <a href="${ctxPath}/hotel">客栈</a> <a
+                        href="${ctxPath}/ticket">门票</a> <!--<a href="${ctxPath}/car">租车</a>-->
+                </ol>
+                <div class="siderCatItemMain clearfix">
+                    <div class="siderCatItemMainLeft fl">
+                        <!--
+                        <div class="topRecommend">
+                            <ul class="clearfix">
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                            </ul>
+                        </div>
+                        -->
+                        <div class="catListWrap">
+                            <!--# for(otherLabel in otherLabelPage.list![]) { -->
+                            <ul class="clearfix">
+                                <h4>${otherLabel.name}</h4>
+                                <li class="allCat"><a href="${ctxPath}/hotel">全部</a></li>
+                                <!--# for(child in otherLabel.children![]) { -->
+                                <li><a href="${ctxPath}/${otherLabel.production}?label=${child.name}">${child.name}</a>
+                                </li>
+                                <!--# } -->
+                            </ul>
+                            <!--# } -->
+                        </div>
+                    </div>
+                    <div class="siderCatItemMainRight fr">
+                        <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            <div class="siderCatItem">
+                <h3>旅行目的地</h3>
+                <ol>
+                    <!--# for(target in targetPage.list![]) { -->
+                    <!--# if(target_index < 3) { -->
+                    <a href="${ctxPath}/line?target=${target.name}">${target.name}</a>
+                    <!--# } -->
+                    <!--# } -->
+                </ol>
+                <div class="siderCatItemMain clearfix">
+                    <div class="siderCatItemMainLeft fl">
+                        <!--
+                        <div class="topRecommend">
+                            <ul class="clearfix">
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                                <li>双“蛋”优惠行动</li>
+                            </ul>
+                        </div>
+                        -->
+                        <div class="catListWrap">
+                            <!--# for(target in targetPage.list![]) { -->
+                            <ul class="clearfix">
+                                <h4>${target.name}</h4>
+                                <li class="allCat"><a href="${ctxPath}/line">全部</a></li>
+                                <!--# for(child in target.children![]) { -->
+                                <li><a href="${ctxPath}/line?target=${child.name}">${child.name}</a></li>
+                                <!--# } -->
+                            </ul>
+                            <!--# } -->
+                        </div>
+                    </div>
+                    <div class="siderCatItemMainRight fr">
+                        <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            <div class="siderCatItem">
+                <h3>包团&amp;定制</h3>
+                <ol>
+                    <a href="${ctxPath}/custom/index">个性定制</a>
+                    <!--
+                    <a href="${ctxPath}/custom/meeting">商务会议</a>
+                    <a href="${ctxPath}/custom/travel">公司旅游</a>
+                    -->
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="menuMain fl">
+        <ul class="clearfix fntYh">
+            <li class="<!--# if(cur!'' == 'home') { print('current'); } -->"><a href="${ctxPath}/">首页</a></li>
+            <li class="<!--# if(cur!'' == 'line') { print('current'); } -->"><a href="${ctxPath}/line">跟团游</a></li>
+            <li class="<!--# if(cur!'' == 'car') { print('current'); } -->"><a href="${ctxPath}/car">自由行</a></li>
+            <li class="<!--# if(cur!'' == 'ticket') { print('current'); } -->"><a href="${ctxPath}/ticket">门票</a></li>
+            <li class="<!--# if(cur!'' == 'hotel') { print('current'); } -->"><a href="${ctxPath}/hotel">酒店</a></li>
+            <li class="<!--# if(cur!'' == 'custom') { print('current'); } -->"><a href="${ctxPath}/custom">定制旅行</a></li>
+        </ul>
+    </div>
+</div>
+</div>

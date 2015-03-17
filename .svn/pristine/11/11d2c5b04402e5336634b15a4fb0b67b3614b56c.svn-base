@@ -1,0 +1,146 @@
+<div id="revision_food">
+    <div class="revision_fooder">
+     <div class="fooder_top">
+       <ul>
+         <li><img src="${ctxPath}/resource/images/foot_left.png" /></li>
+         <li><img src="${ctxPath}/resource/images/foot_mid.png" /></li>
+         <li><img src="${ctxPath}/resource/images/foot_right.png" /></li>
+       </ul>
+     </div>
+     <div class="fooder_mid">
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">消费者保障</li>
+            <!--# for(helpPage in helps![]) { -->
+            <!--# if(helpPage.tag == '消费者保障') { -->
+            <li><a href="${ctxPath}/help/${helpPage.id}">${helpPage.title}</a></li>
+            <!--# } -->
+            <!--# } -->
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">支付方式</li>
+            <!--# for(helpPage in helps![]) { -->
+            <!--# if(helpPage.tag == '支付方式') { -->
+            <li><a href="${ctxPath}/help/${helpPage.id}">${helpPage.title}</a></li>
+            <!--# } -->
+            <!--# } -->
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">旅游合同签署</li>
+            <!--# for(helpPage in helps![]) { -->
+            <!--# if(helpPage.tag == '旅游合同签署') { -->
+            <li><a href="${ctxPath}/help/${helpPage.id}">${helpPage.title}</a></li>
+            <!--# } -->
+            <!--# } -->
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">假日风光会员</li>
+            <!--# for(helpPage in helps![]) { -->
+            <!--# if(helpPage.tag == '假日风光会员') { -->
+            <li><a href="${ctxPath}/help/${helpPage.id}">${helpPage.title}</a></li>
+            <!--# } -->
+            <!--# } -->
+          </ul>
+        </div>
+        <div class="fooderLi" style="border:none">
+          <ul>
+            <li class="st14">业务合作</li>
+            <!--# for(helpPage in helps![]) { -->
+            <!--# if(helpPage.tag == '业务合作') { -->
+            <li><a href="${ctxPath}/help/${helpPage.id}">${helpPage.title}</a></li>
+            <!--# } -->
+            <!--# } -->
+          </ul>
+        </div>
+     </div>
+     <div class="fooder_down">
+       <ul>
+         <li><img src="${ctxPath}/resource/images/v_03.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_05.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_07.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_09.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_01.jpg" /></li>
+       </ul>
+       <p>版权所有:云南假日风光国际旅行社有限公司 网站备案号：滇ICP备14001455号-1<br />
+		      公司地址:云南省昆明市官渡区官南大道新南站3楼 热线电话:400-848-8099 0871-67159355</p>
+     </div>
+    </div> 
+  </div>
+  
+ 
+  	<div id="floatServiceWrap" >
+    <div class="goTop"><img src="${ctxPath}/resource/images/top.jpg" /></div>
+	<div class="telllulu"><a><img src="${ctxPath}/resource/images/tell.jpg" /></a><div class="tellbox"><img src="${ctxPath}/resource/images/tellbox.jpg" /></div></div>
+    
+    <div class="">
+    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODAzMDU5N18xMzUxNzVfNDAwODQ4ODA5OV8yXw"
+               target="_blank"><img src="${ctxPath}/resource/images/QQ.jpg" /></a>
+    </div>
+     <!--# if(cur!'' == 'home'){ -->
+     <ul>
+	     <li><div class="floattext"><a href="#seconder_xl">品质长线</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#seconder">热门短线</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#Third">景区门票</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#Fourth">特价酒店</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#Fifth">旅游资讯</a></div>
+	     </li>
+     </ul>
+     <!--# } -->
+     
+     <!--# if(cur!'' == 'detail-line'){ -->
+     <ul>
+	     <li><div class="floattext"> <a href="#_xlts">线路特色</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#_xcsm">行程说明</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#_fysm">费用说明</a></div>
+	     </li>
+	     <li><div class="floattext"><a href="#_wxts">温馨提示</a></div>
+	     </li>
+	     <li><div class="floattext"> <a href="#_ydzn">预订指南</a></div>
+	     </li>
+     </ul>
+      <!--# } -->
+      
+     
+      
+</div>
+
+<script src="js/fudong.js"></script>
+<script src="js/jLamCustom.js"></script>  
+  
+<!--js public load-->
+
+<script src="${ctxPath}/resource/js/jquery.js"></script>
+
+<script src="${ctxPath}/resource/js/jquery.cookie.js"></script>
+<script src="${ctxPath}/resource/js/support/prefixfree.js"></script>
+<script src="${ctxPath}/resource/js/jLamCustom.js"></script>
+<script src="${ctxPath}/resource/js/autoZoom.js"></script>
+<script src="${ctxPath}/resource/js/xdate.js"></script>
+
+<!--# if(cur!'' != 'detail') { -->
+<script src="${ctxPath}/resource/js/jquery.lazyload.min.js"></script>
+<!--# } -->
+
+<script>
+    $(function () {
+
+        <!--# if(cur!'' != 'detail') { -->
+        //$("img.lazy").lazyload({ threshold : 200 }); 
+        $("img.lazy").lazyload(); 
+        <!--# } -->
+    });
+</script>
+
+

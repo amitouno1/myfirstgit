@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中秋专题活动</title>
+</head>
+<style>
+*{padding:0px; margin:0px;}
+body {background:#fff; font-family:Arial, Helvetica, sans-serif; line-height:20px }
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0px; margin:0px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+a{ text-decoration:none; display:block}a:hover{ text-decoration:underline;}
+.zqbg{width:100%; position:absolute; overflow:hidden; left:0px; }
+.zqbg p{background-position:top center; height:100px; overflow:hidden; width:100%; background-repeat:no-repeat}
+.mian{width:1000px; height:auto; overflow:hidden; margin:0 auto; display:block; position:relative}
+.fh a{width:100px; height:30px; overflow:hidden; margin:30px 0px 0px 110px}
+.szwy{width:925px; height:auto; overflow:hidden; margin:0 auto; padding: 970px 0px 0px 0px;}
+.szwy li a{height:300px; margin:5px 0px 50px 0px}
+.szsj{width:900px; height:auto; overflow:hidden; margin:0 auto; padding:120px 0px 0px 0px;}
+.szsj li a{width:430px; height:280px; float:left; margin:5px 5px 5px 10px}
+.zqms{width:860px; height:auto; overflow:hidden; margin:0 auto; padding:210px 0px 0px 0px;}
+.zqms_01,.zqms_01 a{width:360px; height:175px; padding:175px 0px 0px 0px; overflow:hidden; margin:0 auto; float:left}
+.zqms_02,.zqms_02 a{width:245px; height:353px; overflow:hidden; margin:0 auto; float:left}
+.zqms_03{width:245px; height:353px; overflow:hidden; margin:0 auto; float:left}
+.zqms_03 ul li,.zqms_03 ul li a{width:245px; height:175px; overflow:hidden}
+.tbtj{width:880px; height:auto; overflow:hidden; margin:0 auto; padding:225px 0px 0px 0px}
+.tbtj ul li,.tbtj ul li a{width:215px; height:290px; float:left; margin:0px 1px; overflow:hidden}
+.zqqs{width:880px; height:auto; overflow:hidden; margin:0 auto; padding:235px 0px 0px 0px}
+.zqqs ul li,.zqqs ul li a{width:280px; height:360px; float:left; margin:0px 0px 0px 8px; overflow:hidden}
+</style>
+
+
+<body>
+<script type="text/javascript" src="${ctxPath}/resource/js/jquery.js"></script>
+<script type='text/javascript'>
+$(function(){
+	for(i=1;i<=44;i++){
+		$(".zqbg").append('<p style=background-image:url(${ctxPath}/resource/zhongqiu/images/v_'+i+'.jpg)></p>');
+	}
+})
+</script>
+</body>
+
+<div class="zqbg">
+</div>
+<div class="mian">
+  <div class="fh"><a href="http://www.jiarifengguang.com"></a>  </div>
+  <div class="szwy">
+    <ul>
+      <li><a href="http://www.jiarifengguang.com/detail/539a8a032223e70669c028b6"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/539953132223e70669c02833"></a></li>
+    </ul>
+  </div>
+  <div class="szsj">
+    <ul>
+      <li><a href="http://www.jiarifengguang.com/detail/53cdcf32232338c975a706f1"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/539962af2223e70669c0285d"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/53a298d123231edde3a64b46"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/53a29f2a23231edde3a64b53"></a></li>
+    </ul>
+  </div>
+  <div class="zqms">
+    <div class="zqms_01"><a href="http://www.jiarifengguang.com/play/info/53f6b5fe23238cd67b5a7ffb"></a></div>
+    <div class="zqms_02"><a href="http://www.jiarifengguang.com/play/info/53f6b26423238cd67b5a7ff3"></a></div>
+    <div class="zqms_03">
+    <ul>
+      <li><a href="http://www.jiarifengguang.com/play/info/53f6b92123238cd67b5a8001"></a></li>
+      <li><a href="http://www.jiarifengguang.com/play/info/53f6e51f23238cd67b5a801b"></a></li>
+    </ul>
+    </div>
+  </div>
+  <div class="tbtj">
+    <ul>
+      <li><a href="http://www.jiarifengguang.com/detail/539a8a032223e70669c028b6"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/539a702a2223e70669c0289b"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/53996df12223e70669c02875"></a></li>
+      <li><a href="http://www.jiarifengguang.com/detail/539942812223e70669c0280c"></a></li>
+    </ul>
+  </div>
+  <div class="zqqs">
+    <ul>
+      <li><a href="http://www.jiarifengguang.com/play/info/53f6bd3123238cd67b5a8008"></a></li>
+      <li><a href="http://www.jiarifengguang.com/play/info/53f6d1f323238cd67b5a800e"></a></li>
+      <li><a href="http://www.jiarifengguang.com/play/info/53f6d5e723238cd67b5a8014"></a></li>
+    </ul>
+  </div>
+</div>
+</html>

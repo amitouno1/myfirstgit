@@ -1,0 +1,15 @@
+
+<!--# layout("/view/include/layout.html", {cur: 'detail-hotel'}) { -->
+
+	<div class="aboutbg">
+	    <script type="text/javascript" src="js/jquery.js"></script>
+		<script type='text/javascript'>
+		$(function(){
+			for(i=1;i<=110;i++){
+				$(".aboutbg").append('<p style=background-image:url(${ctxPath}/resource/images/x_'+i+'.jpg)></p>');
+			}
+		});
+		</script>
+	</div>
+
+<!--# } -->

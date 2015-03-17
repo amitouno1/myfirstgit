@@ -1,0 +1,150 @@
+<!--# layout("/view/include/layout.html", {cur: "collect"}) { -->
+<div id="main" class="clearfix">
+    <div class="blank"></div>
+    <!--# include("/view/include/left.html"){}-->
+    <div class="userCenterMain fr">
+        <div class="userOrderListAll">
+            <div class="userCenterWhere clearfix"><a href="#" class="orderRecycle">订单回收站</a> <span class="bold">交易管理</span> &gt; 我的收藏</div>
+            <div class="userOrderListTitle clearfix">
+                <form action="${ctxPath}/user/collect">
+                    <ol class="left">
+                        产品名称：
+                        <input type="text" class="searchOrder" name="search" placeholder="商品名称">
+                        <input type="submit" value="查询" class="searchOrderBtn">
+                    </ol>
+                </form>
+            </div>
+            <div class="userOrderListGrid">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th width="70%">产品信息</th>
+                        <th width="17%">参考价</th>
+                        <th width="13%">操作</th>
+                    </tr>
+                    <!--# for(goods in collect![]) { -->
+                    <tr class="page-index">
+                        <td class="collectTitle"><img src="${ctxPath}/rest/image/${goods.master!}"/>
+
+                            <div class="collectTitleDetail">
+                                <ul>
+                                    <h3>${goods.name}</h3>
+                                    <li class="intro">${goods.caption!}</li>
+                                    <li>${goods.commentsSize!0} 单点评/已有 ${goods.sales!0} 人出</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="collectPrice">￥${goods.minRealPrice!0 / 100}<span class="collectPriceTxt">起</span></td>
+                        <td><a href="${ctxPath}/detail/${goods.id}" class="btnReserve">预定</a><a href="${ctxPath}/rest/goods/unCollect/${goods.id}">删除</a></td>
+                    </tr>
+                    <!--# } -->
+                </table>
+            </div>
+            <div class="pagesBottom pagesPadding20 clearmod">
+                <a class="pNum current" href="javascript:void(0)" data-target="1">1</a>
+                <!--# var ppp = 9; var aaa = 2; -->
+                <!--# while (ppp < collect.~size) { -->
+                <a class="pNum" href="#" data-target="${aaa}">${aaa}</a>
+                <!--# ppp = ppp + 10; aaa = aaa + 1; -->
+                <!--# } -->
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <!--# include("/view/user/bottom.html"){}-->
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="../resource/js/plugin/slide.js"></script>
+<script src="../resource/js/jLamCatCustom.js"></script>
+<script src="../resource/js/juimin.js"></script>
+<script src="../resource/js/jquery.ui.datepicker-zh-CN.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var userCenterSiderNavLinks = $("div.userCenterSider").find("a");
+        $(userCenterSiderNavLinks).each(function (i) {
+            var links = $(userCenterSiderNavLinks).eq(i).attr("href"), myURL = document.URL;
+            if (myURL.indexOf(links) != -1) {
+                $(userCenterSiderNavLinks).eq(i).parent().addClass("current");
+            }
+        });
+        $(".uLikeWhat").slide({titCell: ".uLikeWhatTitle ul", mainCell: ".uLikeWhatScreen", effect: "leftLoop", autoPage: true, autoPlay: true});
+        var searchOrder = $("input.searchOrder");
+        $(searchOrder).focus(function () {
+            if ($(this).val() == this.defaultValue) {
+                $(this).val("").css("color", "#000")
+            }
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).val(this.defaultValue).css("color", "#000")
+            }
+        });
+        $(".groupDate").each(function () {
+            $(this).children("i").hover(function () {
+                $(this).addClass("open").next().show();
+            }, function () {
+                $(this).removeClass("open").next().hide();
+            });
+        });
+        $("#dateBegin").datepicker({
+            changeMonth: true,
+            onClose: function (selectedDate) {
+                $("#dateEnd").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#dateEnd").datepicker({
+            defaultDate: "+3m",
+            changeMonth: true,
+            onClose: function (selectedDate) {
+                $("#dateBegin").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        $('.page-index').each(function (index) {
+            if (index > 9) {
+                $(this).hide();
+            }
+        });
+
+        $('.pNum').click(function (e) {
+            e.preventDefault();
+            if ($(this).hasClass('current')) {
+                return;
+            }
+            var page = $(this).data('target');
+            $('.page-index').hide();
+            $('.page-index').each(function (index) {
+                if (index > (10 * page - 1) && index < (10 * page)) {
+                    $(this).show();
+                }
+            });
+        });
+
+        $.cookie.json = true;
+        $.post('${ctxPath}/rest/goods/cookie', {
+            list: ($.cookie('goodsViewList') || []).reverse().join(',')
+        }, function (res) {
+            $.each(res.list, function () {
+                $('.cookielist').append(
+                                '<li>'
+                                + '<a href="#">'
+                                + '<img class="proPic" src="${ctxPath}/rest/image/' + this.id + '"/>'
+                                + '</a>'
+                                + '<h3 style="height: 36px; overflow: hidden;">'
+                                + '<a href="#" target="_blank">' + this.name + '</a>'
+                                + '</h3>'
+                                + '<span>￥' + ((this.minPrice || 0) / 100) + '</span>'
+                                + '</li>');
+            });
+
+        });
+
+        $('.clearCookie').click(function () {
+            $.removeCookie('goodsViewList', {path: '/'});
+            $('.cookielist').empty();
+        });
+    });
+</script>
+</body>
+</html>

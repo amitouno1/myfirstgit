@@ -1,0 +1,131 @@
+body {margin:0px; font-size:12px; font-family:Arial, Helvetica, sans-serif; background:url(../images/n_02.jpg) repeat-x}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0px; margin:0px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+h1{ font-size:20px; font-family:"微软雅黑"; text-align:center; padding-bottom:6px; color:#C00}
+h2{ font-size:14px; padding:8px 0 8px 12px; color:#c00;}
+h2 span{ font-size:12px; font-weight:normal; color:#666; padding-left:20px;}
+a{ color:#333; text-decoration:none;}
+a:hover{text-decoration:none;}
+h3{ padding:10px 0 0 14px; font-size:14px; color:#333;}
+h3 span{ font-size:12px; font-weight:normal; color:#666; padding-left:6px;}
+h4{font-size:20px;font-family:"微软雅黑"; padding-bottom:6px;line-height:28px;}
+h4 span{ color:#c00; }
+h5{font-size:20px;font-family:"微软雅黑"; float:left; padding:10px 0 0 20px}
+h6{ font-size:20px; font-family:"微软雅黑"; padding-bottom:6px; color:#C00}
+
+
+
+#revision_head{width:1000px; height:auto; overflow:hidden; margin:0 auto}
+.revision_toper{width:auto; height:110px; height:auto; overflow:hidden}
+.revision_top_left{width:271px; height:auto; overflow:hidden; float:left}
+.revision_top_right{width:180px; height:auto; overflow:hidden; float:right; text-align:right}
+.revision_top_right ul li{float:left; line-height:30px; color:#666666;}
+.revision_top_right ul li a{color:#666666}
+.revision_top_right ul li span{color:#da5b7e}
+.revision_toperLeft{width:700px; height:auto; overflow:hidden; float:left}
+.logo{float:left; margin:15px 0px}
+.Search{width:496px; height:auto; float:right; overflow:hidden; margin:35px 0px 0px 0px; line-height:24px}
+.textbox1{width:388px; height:32px; overflow:hidden; background:url(../images/sersh.jpg) no-repeat; border:none; padding:0px 5px; line-height:32px}
+.butbox1{width:98px; height:32px; overflow:hidden; background:url(../images/Search.jpg) no-repeat; border:none; float:right}
+.Search p{color:#999999; margin:5px 0px}
+.revision_toperRight{width:250px; height:auto; overflow:hidden; float:right; margin:15px 0px}
+.revision_nav{width:1000px; overflow:hidden; height:auto}
+.revision_navleft{float:left; width:780px; height:46px; overflow:hidden}
+.revision_navleft ul li{width:110px; overflow:hidden; height:auto; float:left}
+.nav_bj{background:url(../images/navbj.jpg); width:110px; height:40px; overflow:hidden}
+.revision_navright{float:right; width:220px; height:auto; overflow:hidden; margin:15px 0px}
+.revision_navright ul li{float:left; line-height:20px; overflow:hidden; color:#FFF; margin-right:2px}
+.revision_navright ul li img{float:left}
+.nav_banner{width:1000px; height:auto; overflow:hidden; margin:0 auto}
+.revision_navsecond{float:left; width:105px; height:auto; overflow:hidden}
+.revision_navsecond ul li{margin:0px 0px 4px 0px}
+.revision_banner{float:right; width:890px; height:auto; overflow:hidden}
+
+
+/*身体*/
+#revision_main{background:url(../images/mainbj.png) no-repeat; width:1100px; height:auto; overflow:hidden; margin:0 auto;}
+#revision_mid{width:1000px; height:auto; overflow:hidden; margin:0 auto; line-height:24px}
+#frister{width:1000px; height:auto; overflow:hidden; margin:5px 0px}
+.nav_title{font-family:"微软雅黑"; font-size:18px; overflow:hidden; line-height:24px; margin:5px 0px; color:#666666; font-weight:bold; height:30px}
+.nav_title img{margin-right:5px; float:left}
+.nav_title span{float:right; font-size:12px; color:#666666; font-family:"宋体"; margin-right:8px}
+.frister_left{width:670px; height:auto; overflow:hidden; float:left}
+.frister_left ul{width:670px; height:auto; overflow:hidden}
+.frister_left ul li{float:left;background-color:#FFF; margin-right:2px; line-height:24px}
+.frister_text{padding:5px 0px 10px 10px;}
+.frister_right{width:330px; height:auto; overflow:hidden; float:right}
+.frister_pic{background-color:#FFF; width:330px; height:auto; overflow:hidden}
+.frister_pic img{margin:9px 10px; max-width:310px; max-height:200px}
+.pic_text{font-size:12px; color:#8f8f8f; font-family:"宋体"; margin:0px 10px}
+.pic_but{text-align:right}
+
+#seconder{width:1000px; height:auto; overflow:hidden; margin:5px 0px}
+.nav_left{width:900px; height:auto; overflow:hidden; float:left}
+.nav_right{width:98px; height:auto; overflow:hidden; float:right}
+.seconder_left{width:273px; height:auto; overflow:hidden; float:left; background-color:#FFF}
+.seconder_left img{max-width:253px; max-height:320px; overflow:hidden; margin:10px}
+.seconder_right{width:717px; height:auto; overflow:hidden; float:right}
+.second_top{background-color:#FFF; width:717px; height:auto; overflow:hidden; padding:10px 0px}
+.second_top li{float:left; width:165px; height:auto; margin:0px 6px}
+.second_top li img{max-width:165px; max-height:165px; overflow:hidden; margin-bottom:7px}
+.second_top li span{float:right}
+.second_down{background-color:#FFF; width:717px; height:auto; overflow:hidden; padding:10px; margin-top:7px}
+.second_down li{float:left; width:320px; height:auto; overflow:hidden; margin-right:35px; color:#333}
+.second_down li span{font-weight:bold; float:right}
+
+
+#Third{width:1000px; height:auto; overflow:hidden; margin:5px 0px}
+#Third ul{width:1000px; height:auto; overflow:hidden; margin:4px 0px}
+#Third ul li{float:left; width:328px; height:auto; overflow:hidden; margin:0px 8px 5px 0px; background-color:#FFF}
+#Third ul li a:hover{width:328px; height:auto; overflow:hidden;  border:solid 2px #99cc66; display:block; position:absolute; background-color:#FFF}
+.third_left{float:left; width:164px; height:auto; overflow:hidden}
+.third_right{float:left; width:164px; height:auto; overflow:hidden}
+.third_text{font-size:12px; color:#8f8f8f; font-family:"宋体"; width:120px; height:auto; overflow:hidden; margin:0 auto; padding:20px 0px 0px 0px}
+
+
+#Fourth{width:1000px; height:auto; overflow:hidden; margin:5px 0px}
+#Fourth ul li{width:244px; height:auto; float:left; overflow:hidden; margin:0px 8px 0px 0px; background-color:#FFF}
+.Furth_text{padding:0px 0px 0px 10px}
+#Fourth ul li .Furth_text .yh14{margin:5px 0px}
+#Ft_1 img{border-bottom:solid 2px #57c6d1}#Ft_2 img{border-bottom:solid 2px #9acb54}#Ft_3 img{border-bottom:solid 2px #faca56}#Ft_4 img{border-bottom:solid 2px #e97e9c}
+#revision_food{width:1000px; height:auto; overflow:hidden; margin:0 auto}
+
+
+
+#Fifth{width:1000px; height:auto; overflow:hidden; margin:5px 0px}
+.Fifthconnot{background-color:#FFF; width:1000px; height:auto; overflow:hidden; padding:10px 0px}
+.Fifther{width:250px; height:auto; overflow:hidden; float:left; margin:0px 0px; background:url(../images/line_h.jpg) repeat-y right}
+.Fif_title,.Fif_pic{margin:5px 0px}
+.Fifther ul,.Fifther ul a{width:220px; height:auto; overflow:hidden; margin:0 auto; color:#666666}
+
+
+#revision_food{width:100%; height:auto; overflow:hidden; background:url(../images/bj_03.jpg) repeat-x; margin:10px 0px 0px 0px}
+.revision_fooder{width:1000px; height:auto; overflow:hidden; margin:0 auto;}
+.fooder_top{width:1000px; height:auto; line-height:48px; overflow:hidden}
+.fooder_top ul li{float:left; width:330px; height:auto; overflow:hidden; text-align:center}
+.fooder_mid{width:1000px; height:auto; line-height:48px; overflow:hidden; background:url(../images/foodbj.png) bottom no-repeat; padding-bottom:114px}
+.fooderLi{width:195px; height:auto; overflow:hidden; float:left; line-height:24px; border-right:solid 1px #dcdcdc}
+.fooderLi ul{height:auto; overflow:hidden; margin:0 auto; padding:10px 10px 0px 50px}
+.fooder_down{width:500px; height:auto; overflow:hidden; margin:0px auto; padding:20px 0px; line-height:24px; text-align:center; color:#999}
+.fooder_down ul{margin:0 auto; height:auto; overflow:hidden; margin:10px 0px}
+.fooder_down ul li{float:left; text-align:center; margin:0px 7px}
+
+/*字体*/
+.st14{font-size:14px; color:#333; font-weight:bold; margin:5px 0px}
+.yellow{color:#f8c14b}
+.red{ color:#da5b7e}
+.yh12small{font-size:12px; color:#666666; font-weight:bold; font-family:"微软雅黑"}
+.yh12{font-size:12px; color:#8f8f8f; font-family:"宋体"}
+.yh14{font-size:14px; color:#666666; font-weight:bold; font-family:"微软雅黑"}
+.yh14Grey{font-size:14px; color:#999999; font-family:"微软雅黑"}
+.yh14Grey samp{float:right; border:none}
+.yh14Grey span{text-decoration:line-through}
+.yh14red{font-size:14px; color:#da5b7e; font-weight:bold; font-family:"微软雅黑";}
+.yh14yellow{font-size:14px; color:#f8c14b; font-weight:bold; font-family:"微软雅黑";}
+.yh14green{font-size:14px; color:#99cc66; margin-bottom:5px; font-weight:bold; font-family:"微软雅黑";}
+.yh18{font-size:18px; color:#da5b7e; font-weight:bold; font-family:"微软雅黑";}
+.yh24{font-size:22px; color:#da5b7e; font-weight:bold; font-family:"微软雅黑"; line-height:30px}
+.yh14bule{font-size:14px; color:#57c6d1; font-weight:bold; font-family:"微软雅黑"; line-height:30px}
+.yh24bule{font-size:22px; color:#57c6d1; font-weight:bold; font-family:"微软雅黑"; line-height:30px}

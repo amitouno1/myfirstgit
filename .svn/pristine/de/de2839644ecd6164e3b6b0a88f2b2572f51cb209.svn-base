@@ -1,0 +1,47 @@
+*{padding:0px; margin:0px;}
+body {background:#fff; font-family:Arial, Helvetica, sans-serif; line-height:20px }
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0px; margin:0px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+a{ text-decoration:none;}a:hover{ text-decoration:underline;}
+.bg{width:100%; position:absolute; overflow:hidden; left:0px; }
+.bg p{background-position:top center; height:60px; overflow:hidden; width:100%; background-repeat:no-repeat}
+.mian{width:1000px; height:auto; overflow:hidden; margin:0 auto; display:block; position:relative}
+.fh{width:100px; height:30px; overflow:hidden; margin:32px 0px 0px 140px; font-size:12px; color:#666666}
+.fh a{color:#666666; text-decoration:none}
+.nav{width:1000px; height:auto; margin:650px 0px 0px 250px}
+.nav ul li{float:left; height:auto; margin-right:35px}
+#ljzt1{width:710px; height:600px; overflow:hidden; margin:0px 0px 0px 260px; padding-top:150px}
+.ljzt1_L1 a{width:710px; height:310px; display:block}
+.ljzt1_L2 a{width:280px; height:220px; display:block; float:left}
+.ljzt1_L3 a{width:415px; height:220px; display:block; float:right}
+#ljzt2{width:950px; height:auto; margin:0px auto; overflow:hidden; margin-top:120px}
+.ljzt2_L1 a{width:610px; height:460px; overflow:hidden; float:left}
+.ljzt2_L2 a{width:312px; height:251px; overflow:hidden; margin-top:210px; float:right}
+#ljzt3{width:710px; height:auto; overflow:hidden; margin:200px 0px 0px 260px}
+.ljzt3_left{float:left; width:424px; height:auto; overflow:hidden}
+.ljzt3_left a{width:424px; height:424px; display:block}
+.ljzt3_right{float:right; width:280px; height:auto; overflow:hidden}
+.ljzt3_right .ljzt3_l1 a{width:280px; height:210px; display:block}
+.ljzt3_right .ljzt3_l2 a{width:280px; height:210px; display:block}
+#ljzt4{width:950px; height:auto; margin:0 auto; overflow:hidden; margin-top:190px}
+.ljzt4_left{width:580px; height:auto; overflow:hidden; float:left}
+.ljzt4_L1 a{width:580px; height:265px; overflow:hidden; display:block}
+.ljzt4_L2 a{width:580px; height:270px; overflow:hidden; display:block}
+.ljzt4_L3 a{width:352px; height:251px; overflow:hidden; margin-top:210px; float:right}
+#ljzt5{width:700px; height:auto; overflow:hidden; margin:190px 0px 0px 270px}
+.ljzt5_left{float:left; width:440px; height:auto; overflow:hidden}
+.ljzt5_left a{float:left; width:440px; height:440px; display:block; overflow:hidden}
+.ljzt5_right{float:right; width:250px; height:auto; overflow:hidden}
+.ljzt5_right .ljzt3_l1 a{width:250px; height:220px; display:block}
+.ljzt5_right .ljzt3_l2 a{width:250px; height:220px; display:block}
+
+#ljzt6{width:1000px; height:auto; overflow:hidden; margin-top:100px}
+.blk_29{overflow:hidden; width:1000px; ZOOM: 1; position: relative}
+.blk_29 .LeftBotton{background:url(../images/ljzt_left.png) no-repeat 0px 0px; LEFT: 5px; FLOAT: left;width:30px; CURSOR: pointer; position:absolute; top:80px; height:59px}
+.blk_29 .RightBotton {right:0px; background:url(../images/ljzt_right.png) no-repeat; float: right; width: 30px; cursor: pointer; position: absolute; top:80px; height:59px}
+.blk_29 .Cont { MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 888px; PADDING-TOP: 5px}
+.blk_29 .box {float: left; width: 218px; text-align:center; margin-right:10px}
+.blk_29 .box P {matgin: 6px auto 0px; line-height:24px; font-size:14px; color:#cccccc}
+.blk_29 .box P a{font-family:"微软雅黑"; color:#cccccc; text-decoration:none}

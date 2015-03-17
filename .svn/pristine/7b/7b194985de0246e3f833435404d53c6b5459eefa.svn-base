@@ -1,0 +1,460 @@
+<!--# layout("/view/include/layout.html", {cur:"detail-line"}) { -->
+
+<div id="productmain">
+<div class="producttitle"> 首页 > 跟团游 > ${goods.name!}</div>
+<div class="productshow">
+    <div class="showleft">
+        <div class="goodsThumb">
+            <div class="bd">
+                <div class="tempWrap" style="overflow:hidden; position:relative; width:400px">
+                    <ul style="width: 2532px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -400px; ">
+                        <!--# for(img in goods.pics![]) { -->
+                        <li class="clone" style="float:left; width:400px; ">
+                            
+                        	<img src="${ctxPath}/rest/image/${img.id!}">
+                           
+                        </li>
+                        <!--# } -->
+                    </ul>
+                </div>
+            </div>
+            <div class="hd">
+                <ul>
+                    <!--# for(img in goods.pics![]) { -->
+                    <!--# if(img_index == 0) { -->
+                    <li class="on"><img src="${ctxPath}/rest/image/${img.id!}"></li>
+                    <!--# } else { -->
+                    <li><img src="${ctxPath}/rest/image/${img.id!}"></li>
+                    <!--# } -->
+                    <!--# } -->
+
+                </ul>
+                <ol>
+                    <a class="more" href="#" target="_blank">查看全部</a>
+                </ol>
+            </div>
+        </div>
+        <script src="${ctxPath}/resource/css/sy.js"></script>
+        <script src="${ctxPath}/resource/css/slide.js"></script>
+        <script>
+            $(function () {
+                $(".goodsThumb").slide({mainCell: ".bd ul", effect: "leftLoop", delayTime: 500});
+                var dateInput = $("#dateBegin,#dateEnd");
+                $(dateInput).focus(function () {
+                    if ($(this).val() == this.defaultValue) {
+                        $(this).val("").css("color", "#999")
+                    }
+                }).blur(function () {
+                    if ($(this).val() == '') {
+                        $(this).val(this.defaultValue).css("color", "#999")
+                    }
+                });
+
+            });
+        </script>
+    </div>
+    <div class="showright">
+        <div class="yh20"><a href="#">${goods.name!}</a>
+            <p><a href="#">${goods.caption!}</a></p>
+        </div>
+        <div class="monney">
+            <!--# if(goods.SCPrice == '') { -->
+            <div class="jg"><span class="yh10">￥</span><span class="yh30">${goods.minRealPrice!0 / 100} </span></div>
+            <!--# } else { -->
+            <div class="jg">
+            	促销价<span class="yh10">￥</span><span class="yh30">${goods.minRealPrice!0 / 100} </span>暑假特惠
+                <p>市场价：￥${goods.SCPrice!'0'}元</p></div>
+            <!--# } -->
+            <div class="sm"><br/>
+                <a href="#">起价说明</a>
+                <div class="smer">·本起价是从所有可选出发日期中，选出的最低单人价，实际产品价格会根据您所<span class="red">选择的出发日期、出行人数、服务标准、入住酒店房型、航班或交通以及所选附加服务</span>的不同而有所差别；<br />·最后价格以您提交订单、旅游顾问确认后为准。</div>
+            </div>
+        </div>
+        <ul class="xq">
+            <li><img src="${ctxPath}/resource/image/t1.png" width="25" height="25"/>销量：${goods.sales!0}</li>
+            <li><img src="${ctxPath}/resource/image/t2.png" width="25" height="25"/>评价：${commentPage.totalRow!0}</li>
+            <li><img src="${ctxPath}/resource/image/t3.png" width="25" height="25"/>收藏：${goods.collect!0}</li>
+        </ul>
+        <ul class="xc">
+            <li>时间：&nbsp;&nbsp;<span class="selBG">
+            <!--
+	            <select name="date" class="text2">
+	                <!--# for(date in dates) { -->
+	                <option value="${date}">${date}</option>
+	                <!--# } -->
+	            </select>
+	        -->
+	        <!--# for(date in dates) { -->
+	      		<input type="text" id="dateBegin" class="text2" value="${date}">
+	      	<!--# } -->
+            </span></li>
+            <li><span class="red"><strong>出发城市：</strong></span>
+            
+            	<!--# var id2='53055b782748774781312cb0'; -->
+		   		<!--# var argsid; -->
+		   		<!--# var startCity; -->
+		   		
+                <!--# for(arg2 in goods.args![]) { 
+               		argsid =arg2.id; 
+
+               		for(argsP2 in argsPage.list![]) { 
+               		
+	               		if(argsP2.father.id![]==id2&&argsid==argsP2.id)
+	               		{
+          					startCity=argsP2.name;
+          				}
+               		} 
+                	
+                 } -->
+                 ${startCity!}
+            </li>
+            <li><span class="red"><strong>行程天数：</strong></span>${goods.XC!0}</li>
+        </ul>
+        <ul class="rq">
+            <li>
+            	<samp>
+                    <em class="minus"><img src="${ctxPath}/resource/image/down.jpg" width="16" height="13"
+                                           style="display: block"/></em>
+                    <em class="plus" style="padding: 0"><img src="${ctxPath}/resource/image/sown.jpg" width="16"
+                                           height="13" style="display: block"/></em>
+                </samp>
+				成人：<input name="成人" type="text" class="text1" value="1" maxlength="8" readOnly="true"/>
+                
+            </li>
+            
+            <li>
+            	<samp>
+                    <em class="minus"><img src="${ctxPath}/resource/image/down.jpg" width="16" height="13"
+                                           style="display: block"/></em>
+                    <em class="plus" style="padding: 0"><img src="${ctxPath}/resource/image/sown.jpg" width="16"
+                                                             height="13" style="display: block"/></em>
+                </samp>成人价:<strong>￥${goods.linePrice1!0 / 100}</strong>
+            	&nbsp;&nbsp;&nbsp;儿童：<input name="儿童" type="text" class="text1" value="0" maxlength="8"  readOnly="true"/>
+                
+            </li>
+            <li >儿童价：<strong>￥${goods.linePrice2!0 / 100}</strong></li>
+            <li style="float:right; margin-left:0px; margin-right:5px"><span class="etbz">儿童标准<div class="etbzer"><p class="red">儿童价标准：</p>·身高0.8-1.2米（含）；<br />·不占床，只包含座位费，其余产生费用自理。</div></span></li>
+        </ul>
+        <div>
+	        <input name="" class="but1" type="button" value="立即购买"/>
+	        <input name="" class="but2" type="button" value="加入购物车"/>
+        </div>
+        <div class="zf"><strong>支付方式：</strong><img src="${ctxPath}/resource/image/zfb.jpg" width="14" height="14"/>支付宝&nbsp;&nbsp;&nbsp;&nbsp;<strong>服务承诺：</strong>100%发团
+            100%如实描述
+        </div>
+        <div class="zf">本产品由${goods.supplier.name!}为您服务 &nbsp;&nbsp;&nbsp;&nbsp;<strong>服务电话：${ui400.value!}</strong>
+        </div>
+    </div>
+</div>
+
+<div class="details">
+    <div class="detailsleft">
+      <div class="detailsfrist">
+          <div class="detailstitle">
+          		云南旅游
+          </div>
+          <ul>
+           <li><img src="${ctxPath}/resource/image/qc.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/jg.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/zf.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/gj.jpg" width="180" height="55" /></li>
+          </ul>
+        </div>
+
+        <div class="detailssecond">
+            <div class="detailstitle">
+             	热门线路
+            </div>
+            <ul>
+                <!--# for(hotGoods in hotGoodsPage.list![]) { -->
+                                
+                <li>
+                	<a href="#"  onclick="javascript:window.open('/detail/${hotGoods.id}')"><img src="${ctxPath}/rest/image/${hotGoods.master!}" width="180" height="120"/>${hotGoods.name!''}</a>
+                    <div class="xhjg">￥${hotGoods.maxPrice!0 / 100}起</div>
+                </li>
+                
+                <!--# } -->
+            </ul>
+        </div>
+    </div>
+    <div class="detailsright">
+        <div class="tablist">
+            <ul>
+                <li class="tab1"><a href="#_xlts">线路特色</a>
+                </li>
+                <li class="tab2"><a href="#_xcsm">行程说明</a>
+                </li>
+                <li class="tab3"><a href="#_fysm">费用说明</a>
+                </li>
+                <li class="tab4"><a href="#_wxts">温馨提示</a>
+                </li>
+                <li class="tab5"><a href="#_ydzn">预订指南</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tablisttitle" id="_xlts"><img src="${ctxPath}/resource/image/te.png" width="810" height="40"/></div>
+        <div class="features">
+            <ul>
+                <li>
+	                ${goods.lineTSContent1!''}
+	              	<!--# if(goods.lineTSPics.~size!0 >0) { -->
+	                <img src="${ctxPath}/rest/image/${goods.lineTSPics[0]!''}" width="360" height="265"/>
+	                <!--# } -->
+                </li>
+	                <li style="float:right; margin:0px">
+	                ${goods.lineTSContent2!''}
+	                <!--# if(goods.lineTSPics.~size!0 >1) { -->
+	                <img src="${ctxPath}/rest/image/${goods.lineTSPics[1]!''}" width="360" height="265"/>
+	                <!--# } -->
+                </li>
+            </ul>
+        </div>
+        <div class="tablisttitle" id="_xcsm"><img src="${ctxPath}/resource/image/xc.png" width="810" height="40"/></div>
+        <!--# var day = 0; -->
+        <!--# var imgIndex = 0; -->
+        <!--# while(day < goods.XC!0) { -->
+        <!--# imgIndex = imgIndex+1; -->
+        <div class="Trip">
+            <div class="ts"><img src="${ctxPath}/resource/image/day${imgIndex}.png" width="130" height="57"/></div>
+            <div class="dd">${goods.lineXCSite[day]!''}</div>
+        </div>
+        <div class="xcsm">
+            <div class="xcsmtext">${goods.lineXCContent[day]!''}</div>
+            <ul>
+                <!--# for(img in goods.lineXCPics!{}) { -->
+                <!--# if(strutil.startWith(img.key!'', 'lineXCPics_' + day + '_')) { -->
+                <!--# if(img.value!'' != '') { -->
+                <li><img src="${ctxPath}/rest/image/${img.value!''}" width="380" height="300"/></li>
+                <!--# } -->
+                <!--# } -->
+                <!--# } -->
+            </ul>
+            <div class="xcsmer">
+                <div class="xcsmerleft">
+                    <div class="xcsmertitle1"><img src="${ctxPath}/resource/image/cz.png" width="30" height="32"/>用餐
+                    </div>
+                    <ul class="xcsmul">
+                        <li>${goods.lineXCOther[day]['YC']!''}</li>
+                    </ul>
+                </div>
+                <div class="xcsmerleft">
+                    <div class="xcsmertitle2"><img src="${ctxPath}/resource/image/jd.png" width="30" height="32"/>交通
+                    </div>
+                    <ul class="xcsmul">
+                        <li>${goods.lineXCOther[day]['JT']!''}</li>
+                    </ul>
+                </div>
+                <div class="xcsmerleft">
+                    <div class="xcsmertitle3"><img src="${ctxPath}/resource/image/zs.png" width="36" height="27"/>住宿
+                    </div>
+                    <ul class="xcsmul">
+                        <li id="aaa">${goods.lineXCOther[day]['ZS']!''}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--# day = day + 1; -->
+        <!--# } -->
+
+        <div class="fyzx">
+            <div class="tablisttitle" id="_fysm"><img src="${ctxPath}/resource/image/fy.png" width="810" height="40"/></div>
+            <div class="fysm">
+                <div class="fysmup">
+                    <div class="fysmtitle">费用包含</div>
+                    <ul>
+                        <!--# for (item in goods.lineList!{}) { -->
+                        <!--# if(item.value['status']!0 == 1) { -->
+                        <li><span>★ ${item.value['name']!''}:&nbsp;&nbsp;${item.value['content']!''}</span>
+                        	 
+                        </li>
+                        <!--# } -->
+                        <!--# } -->
+                    </ul>
+                </div>
+                <div class="fysmup">
+                    <div class="fysmtitle">费用不包含</div>
+                    <ul>
+                        <!--# for (item in goods.lineList!{}) { -->
+                        <!--# if(item.value['status']!0 == 2) { -->
+                        <li><span>★ ${item.value['name']!''}:&nbsp;&nbsp;${item.value['content']!''}</span></li>
+                        <!--# } -->
+                        <!--# } -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tablisttitle" id="_wxts"><img src="${ctxPath}/resource/image/wx.png" width="810" height="40"/></div>
+        <div class="tips">
+            <div class="tipser">${goods.lineTip!''}</div>
+            <div class="tipserimg">
+                <img src="${ctxPath}/resource/image/tipsimg.png" width="220" height="234"/></div>
+        </div>
+        <div class="tablisttitle" id="_ydzn"><img src="${ctxPath}/resource/image/yd.png" width="810" height="40"/></div>
+        <div class="ydzn">
+            <img src="${ctxPath}/resource/image/yder.jpg" width="774" height="133"/></div>
+        <div class="tips">
+            <div class="ydzner">
+                <div class="ydzntitle">注意事项</div>
+                ${goods.lineFlow}
+            </div>
+            <div class="tipserimg">
+                <img src="${ctxPath}/resource/image/ydimg.png" width="199" height="234"/></div>
+        </div>
+        
+        <!-- 
+        <div class="tablisttitle" ><img src="${ctxPath}/resource/image/zx.png" width="810" height="40"/></div>
+        <div class="tabMessage">
+            <ul>
+                <!--# for(comment in commentPage.list![]) { -->
+                <li>
+                    <table width="100%">
+                        <tr>
+                            <td width="16%" align="center"><img src="${ctxPath}/resource/image/ure.jpg" width="14"
+                                                                height="14"/>咨询问题：
+                            </td>
+                            <td width="84%">${comment.content!''}</td>
+                        </tr>
+                        <!--# if(comment.reply.content!'' != '') { -->
+                        <tr class="red">
+                            <td align="center" valign="top"><img src="${ctxPath}/resource/image/ureer.jpg" width="14"
+                                                                 height="14"/>客服回复：
+                            </td>
+                            <td>${comment.reply.content!''}</td>
+                        </tr>
+                        <!--# } -->
+                    </table>
+                </li>
+                <!--# } -->
+            </ul>
+        </div>
+        -->
+        
+    </div>
+
+</div>
+</div>
+
+<div id="AdLayer">
+    <div class="fudong">
+
+        <div class="fudongup" onmousemove="style.background='url(${ctxPath}/resource/image/f1.jpg)'"
+             onmouseout="style.background='url(${ctxPath}/resource/image/f8.jpg)'"><span>特色</span></div>
+        <div class="fudonger" onmousemove="style.background='url(${ctxPath}/resource/image/f3.jpg)'"
+             onmouseout="style.background='url(${ctxPath}/resource/image/f2.jpg)'">行程
+        </div>
+        <div class="fudonger" onmousemove="style.background='url(${ctxPath}/resource/image/f4.jpg)'"
+             onmouseout="style.background='url(${ctxPath}/resource/image/f2.jpg)'">费用
+        </div>
+        <div class="fudonger" onmousemove="style.background='url(${ctxPath}/resource/image/f5.jpg)'"
+             onmouseout="style.background='url(${ctxPath}/resource/image/f2.jpg)'">提示
+        </div>
+        <div class="fudongdown" onmousemove="style.background='url(${ctxPath}/resource/image/f7.jpg)'"
+             onmouseout="style.background='url(${ctxPath}/resource/image/f9.jpg)'"><span>预定</span></div>
+
+    </div>
+
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+<script src="${ctxPath}/resource/js/juimin.js"></script>
+<script src="${ctxPath}/resource/js/jquery.ui.datepicker-zh-CN.js"></script>
+<!--js pages part-->
+<script language="JavaScript" type="text/javascript" src="${ctxPath}/resource/css/lanrentuku.js"></script>
+<script type="text/plain" id="priceSet">${goods.priceSet}</script>
+<script>
+
+    $(function () {
+    
+    
+    
+    
+        var priceSet = JSON.parse($('#priceSet').html());
+
+        var countPrice = function () {
+            var price = 0;
+            $.each(priceSet, function () {
+                price += this.price * (+$('[name="' + this.title + '"]').val() || 0)
+            });
+            return price;
+        };
+
+        var updatePrice = function () {
+            var price = countPrice();
+            $('.yh30').text((price / 100) + ' ');
+        };
+
+
+        $('.plus').on('click', function () {
+            var $el = $(this).closest('li').find('input');
+            var n = +$el.val() || 0;
+            if (n > 0) {
+                n = n - 1;
+            }
+            $el.val(n);
+
+            updatePrice();
+        });
+        $('.minus').on('click', function () {
+            var $el = $(this).closest('li').find('input');
+            var n = +$el.val() || 0;
+            $el.val(n + 1);
+
+            updatePrice();
+        });
+
+
+        $('.but1, .but2').click(function () {
+            var pre = $(this).hasClass('but2');
+
+            if ($('#dateBegin').val() == '点击选择日历' || !$('#dateBegin').val()) {
+	            alert('请选择消费时间');
+	            return;
+        	}
+        	
+        	
+            $.post('${ctxPath}/rest/order/save', {
+                goodsID: '${goods.id}',
+                priceSet: JSON.stringify(priceSet),
+                number1: +$('[name="成人"]').val() || 0,
+                number2: +$('[name="儿童"]').val() || 0,
+                date:$('#dateBegin').val(),
+                price: countPrice(),
+                pre: pre
+            }, function (res) {
+                if (pre) {
+                    $('.cartTotal').text(res.total);
+                    alert("已经加入购物车");
+                } else {
+                    location.href = '${ctxPath}/order/' + res.order.id;
+                }
+            });
+        });
+    });
+    
+    var dateInput = $("#dateBegin");
+    $(dateInput).focus(function () {
+        if ($(this).val() == this.defaultValue) {
+            $(this).val("").css("color", "#999");
+        }
+    }).blur(function () {
+                if ($(this).val() == '') {
+                    $(this).val(this.defaultValue).css("color", "#999");
+                }
+            });
+    
+    $("#dateBegin").datepicker({
+        changeMonth: true,
+        onClose: function (selectedDate) {
+        	
+        },
+        onSelect: function () {
+            //alert("aaaa");
+        }
+     
+    });
+    
+</script>
+</body>
+</html>

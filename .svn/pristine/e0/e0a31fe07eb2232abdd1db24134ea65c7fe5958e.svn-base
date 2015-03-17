@@ -1,0 +1,10 @@
+<div class="meetingGroupListSider fl">
+    <div class="meetingGroupListSiderTel fntYh">${ui400.value!}</div>
+    <div class="meetingGroupListSiderNav">
+        <ul class="clearfix">
+            <li><a href="${ctxPath}/custom/index">个性定制</a></li>
+            <li><a href="${ctxPath}/custom/meeting">商务会议</a></li>
+            <li><a href="${ctxPath}/custom/travel">公司旅游</a></li>
+        </ul>
+    </div>
+</div>

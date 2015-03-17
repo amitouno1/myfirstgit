@@ -1,0 +1,59 @@
+<!--# layout("/view/include/layout.html", {cur: "message"}) { -->
+<div id="main" class="clearfix">
+    <div class="blank"></div>
+    <!--# include("/view/include/left.html"){}-->
+    <div class="userCenterMain fr">
+        <div class="userOrderListAll">
+            <div class="userCenterWhere clearfix"><span class="bold">账户管理</span> &gt; 短消息</div>
+            <div class="pointsRecord">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th width="10%"><input type="checkbox"></th>
+                        <th width="60%">主题</th>
+                        <th width="15%">发送人</th>
+                        <th width="15%">发送时间</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>请将您的行程告知我们！</td>
+                        <td>张客户</td>
+                        <td>2013-12-09 12:56:58</td>
+                    </tr>
+                    <!--if 无数据-->
+                    <tr>
+                        <td colspan="4">暂无相关数据</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pagesBottom pagesPadding20 clearmod"><a class="disable">&lt;</a><!--<a class="prev" href="#">上一页</a>--><a class="current" href="javascript:void(0)">1</a><a class="pNum" href="#2">2</a><a class="pNum"
+                                                                                                                                                                                                                   href="#3">3</a><a
+                    class="pNum" href="#4">4</a><a class="pNum" href="#5">5</a><a class="next" href="#">下一页</a><!--<a class="disable">&gt;</a>--><span class="txt leftMg">跳转至</span><span class="input">
+          <input type="text">
+          </span><span class="txt">页</span><span class="btnInput">
+          <input type="submit" value="确定">
+          </span></div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <!--# include("/view/user/bottom.html"){}-->
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="../resource/js/plugin/slide.js"></script>
+<script src="../resource/js/jLamCatCustom.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var userCenterSiderNavLinks = $("div.userCenterSider").find("a");
+        $(userCenterSiderNavLinks).each(function (i) {
+            var links = $(userCenterSiderNavLinks).eq(i).attr("href"), myURL = document.URL;
+            if (myURL.indexOf(links) != -1) {
+                $(userCenterSiderNavLinks).eq(i).parent().addClass("current");
+            }
+        });
+        $(".uLikeWhat").slide({titCell: ".uLikeWhatTitle ul", mainCell: ".uLikeWhatScreen", effect: "leftLoop", autoPage: true, autoPlay: true});
+    });
+</script>
+</body>
+</html>

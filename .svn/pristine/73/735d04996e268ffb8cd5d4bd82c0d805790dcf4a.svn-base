@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全民世界杯全名看球游丽江</title>
+<link href="${ctxPath}/resource/zqbs/css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+
+
+
+<body>
+<script type="text/javascript" src="${ctxPath}/resource/zqbs/js/jquery.js"></script>
+<script type='text/javascript'>
+$(function(){
+	for(i=1;i<=37;i++){
+		$(".bg").append('<p style=background-image:url(${ctxPath}/resource/zqbs/images/s_'+i+'.jpg)></p>');
+	}
+})
+</script>
+</body>
+<div class="bg">
+</div>
+<div class="mian">
+ <div class="fh"><a href="http://www.jiarifengguang.com/">返回首页</a></div>
+ <div class="zjgg"><img src="${ctxPath}/resource/zqbs/images/noday.png" width="290" height="118" /></div>
+ <div class="foot">
+    <div class="footer"><h3>一等奖中奖名单</h3>
+</div>
+    <div class="footer" style="margin-left:10px"><h3>二等奖中奖名单</h3></div>
+    <div class="footer" style="margin-right:0px; margin-left:20px"><h3>三等奖中奖名单</h3></div>
+ </div>
+</div>
+</html>

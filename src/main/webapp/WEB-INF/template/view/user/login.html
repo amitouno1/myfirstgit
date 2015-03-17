@@ -1,0 +1,89 @@
+<!--# layout("/view/include/layout.html") { -->
+<div id="main">
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="loginWrap clearfix">
+        <div class="loginFocus fl">
+            <ul>
+                <li><img style="width:380px;height:380px;" src="${ctxPath}/resource/images/login.jpg" alt=""/></li>
+            </ul>
+        </div>
+        <div class="loginForm fr">
+
+            <div class="loginFormContent">
+                <h3>会员登录</h3>
+
+                <form method="post" action="${ctxPath}/login/doLogin">
+                    <ul>
+                        <li>
+                            <input name="username" type="text" class="signupUserId" value="${username!'用户名'}" id="userId">
+                        </li>
+                        <li>
+                            <input name="password" type="password" class="signupUserPsw" id="userPsw">
+                        </li>
+                        <li>
+                            <input type="text" class="signupCode" name="captcha">
+                            <img class="code" src="${ctxPath}/captcha?randomCodeKey=login"/><a href="javascript:void(0)" class="refresh">看不清,换一张</a></li>
+                        <li class="small">
+                        
+                         	<!--# if(error!"" != "") { -->
+	                        	<font color="red"><b>${error}</b></font>
+	                        <!--# } -->
+                            <a href="javascript:void(0)" class="findPsw">忘记密码？</a>
+                        </li>
+                        
+                        <li>
+                            <input type="hidden" value="${redirect!}" name="redirect">
+                            <input type="submit" value="登录" class="signupBtn">
+                        </li>
+
+                        <li class="reg">您还没有假日风光账号,<a href="${ctxPath}/sign">免费注册&gt;&gt;</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--# include('/view/include/xy.html') {} -->
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+<script src="${ctxPath}/resource/js/juimin.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var protocolBtn = $("#protocolBtn"),
+                protocolModal = $("#protocolModal");
+        $(protocolModal).dialog({
+            resizable: false,
+            autoOpen: false,
+            title: "阳光用户注册协议",
+            height: 580,
+            width: 680,
+            modal: true,
+            position: ["center", "center"]
+        });
+        $(protocolBtn).click(function () {
+            $(protocolModal).dialog("open");
+        });
+        $("#userId").focus(function () {
+            if ($(this).val() == this.defaultValue) {
+                $(this).val("").css("color", "#656565")
+            }
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).val(this.defaultValue).css("color", "#656565")
+            }
+        });
+
+        $('.refresh').click(function () {
+            var src = '${ctxPath}/captcha?randomCodeKey=login&_dc=';
+            $('.code').attr('src', src + +new Date);
+        });
+    });
+</script>
+</body>
+</html>

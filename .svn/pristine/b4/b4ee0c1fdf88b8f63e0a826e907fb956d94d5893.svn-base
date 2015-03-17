@@ -1,0 +1,12 @@
+
+function changTitleforHome()
+{
+	var key="aaaa";
+	document.title=key;
+}
+
+function changTitleforLine()
+{
+	var key="bbbb";
+	document.title=key;
+}

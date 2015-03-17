@@ -1,0 +1,17 @@
+<!--# layout("/mobile/include/layout.html") { -->
+<div  style=" background-color:yellow">
+
+	<ul>
+   	<!--# for(goods in hotLineGoodsPage.list![]) { -->
+       		<!--# var picsize=goods.pics.~size!0-1;-->
+       		
+       		<!--# if(goods.code=='xcjx_view'&&goods.pics.~size>0) { -->
+	         	<li>${goods.name}</li>
+        	<!--# } -->
+        	
+    <!--# } -->
+   	
+   	</ul>
+   	
+</div>
+<!--# } -->

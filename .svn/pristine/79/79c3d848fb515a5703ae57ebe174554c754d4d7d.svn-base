@@ -1,0 +1,60 @@
+<div id="revision_food">
+    <div class="revision_fooder">
+     <div class="fooder_top">
+       <ul>
+         <li><img src="${ctxPath}/resource/images/foot_left.png" /></li>
+         <li><img src="${ctxPath}/resource/images/foot_mid.png" /></li>
+         <li><img src="${ctxPath}/resource/images/foot_right.png" /></li>
+       </ul>
+     </div>
+     <div class="fooder_mid">
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">消费者保障</li>
+            <li>透明行程  全程无忧</li>
+            <li>超值价格  管家服务</li>
+            <li>铁定出游</li>
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">支付方式</li>
+            <li>银行汇款支付流程</li>
+            <li>如何预订旅游产品</li>
+            <li>支付宝、网银付款流程</li>
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">旅游合同签署</li>
+            <li>周边交通线路</li>
+            <li>传真、邮递签署合同</li>
+          </ul>
+        </div>
+        <div class="fooderLi">
+          <ul>
+            <li class="st14">假日风光会员</li>
+            <li>会员特权</li>
+            <li>假日风光旅游券</li>
+          </ul>
+        </div>
+        <div class="fooderLi" style="border:none">
+          <ul>
+            <li class="st14">业务合作</li>
+            <li>旅游产品合作</li>
+            <li>广告服务</li>
+          </ul>
+        </div>
+     </div>
+     <div class="fooder_down">
+       <ul>
+         <li><img src="${ctxPath}/resource/images/v_03.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_05.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_07.jpg" /></li>
+         <li><img src="${ctxPath}/resource/images/v_09.jpg" /></li>
+       </ul>
+       <p>版权所有:云南假日风光国际旅行社有限公司 网站备案号：滇ICP备14001455号-1<br />
+公司地址:云南省昆明市官渡区官南大道新南站3楼 热线电话:400-848-8099 0871-67159355</p>
+     </div>
+    </div> 
+  </div>

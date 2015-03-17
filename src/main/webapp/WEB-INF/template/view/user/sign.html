@@ -1,0 +1,116 @@
+<!--# layout("/view/include/layout.html", {cur: "sign"}) { -->
+<div id="main">
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="singlePageWrap">
+        <div class="signupWrap">
+            <h6><i class="iwtlogin">我已经是会员了，<a href="${ctxPath}/login">马上登录&gt;&gt;</a></i>用户注册<i class="signuoTip">注册即送400积分，赶紧下手吧！</i>
+            </h6>
+
+            <form method="post" action="${ctxPath}/sign/doSign">
+                <ul class="signupForm">
+                    <li><span>* 账户名:</span>
+                        <input name="username" type="text" class="signupTxt" value="邮箱/用户名/手机号" id="userId"
+                               value="${username!''}">
+                        <i style="display: none" class="username-info"></i>
+                        <!--# if(error!"" != "") { -->
+                        	<i>${error}</i>
+                        <!--# } -->
+                    </li>
+                    <li><span>* 请设置密码:</span>
+                        <input name="password" type="password" class="signupTxt" autocomplete="off">
+                        <i style="display: none">6-20位字符,可使用字母、数字或符号的组合，不建议使用纯数字、纯字母、纯符号。</i></li>
+                    <li><span>* 请确认密码:</span>
+                        <input name="password2" type="password" class="signupTxt">
+                        <i style="display: none" class="pass-info">6-20位字符,可使用字母、数字或符号的组合，不建议使用纯数字、纯字母、纯符号。</i></li>
+                    <li><span>* 验证码:</span>
+                        <input name="captcha" type="text" class="signupCode">
+                        <img class="code" src="${ctxPath}/captcha?randomCodeKey=sign"/><a href="javascript:void(0)"
+                                                                                          class="refresh" >&nbsp;&nbsp;换一张</a>
+                    </li>
+                    <li class="small">
+                        <input type="checkbox" class="checkbox">
+                        	我已阅读并同意《<a href="javascript:void(0)" id="protocolBtn">阳光用户注册协议</a>》
+                        <i style="display: none" class="allow-info"></i>
+                    </li>
+                    <li>
+                        <input name="redirect" type="hidden" value="${redirect!'/'}">
+                        <input type="submit" value="立即注册" class="signupBtn">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<!--# include('/view/include/xy.html') {} -->
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+<script src="${ctxPath}/resource/js/juimin.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var protocolBtn = $("#protocolBtn"),
+            protocolModal = $("#protocolModal");
+        $(protocolModal).dialog({
+            resizable: false,
+            autoOpen: false,
+            title: "阳光用户注册协议",
+            height: 580,
+            width: 680,
+            modal: true,
+            position: ["center", "center"]
+        });
+        $(protocolBtn).click(function () {
+            $(protocolModal).dialog("open");
+        });
+        $("#userId").focus(function () {
+            if ($(this).val() == this.defaultValue) {
+                $(this).val("").css("color", "#656565")
+            }
+        }).blur(function () {
+                    if ($(this).val() == '') {
+                        $(this).val(this.defaultValue).css("color", "#656565")
+                    }
+                });
+
+        $('.refresh').click(function () {
+            var src = '${ctxPath}/captcha?randomCodeKey=sign&_dc=';
+            $('.code').attr('src', src + +new Date);
+        });
+
+        $('.signupBtn').click(function () {
+           
+            var username = $.trim($('[name="username"]').val());
+            var password = $.trim($('[name="password"]').val());
+            var password2 = $.trim($('[name="password2"]').val());
+            
+            if (username==""||username=="邮箱/用户名/手机号") {
+                $('.username-info').text('用户名不能空').show();
+                return false;
+            }
+            
+            if (password == ""||password2=="") {
+                $('.pass-info').text('密码不能为空').show();
+                return false;
+            }
+
+            if (password != password2) {
+                $('.pass-info').text('密码不一致，请重新输入').show();
+                return false;
+            }
+            
+             if (!$('.checkbox').prop('checked')) {
+            
+            	$('.allow-info').text('请查阅并同意用户协议后再进行注册').show();
+
+                return false;
+            }
+            
+            
+        });
+    });
+</script>
+</body>
+</html>

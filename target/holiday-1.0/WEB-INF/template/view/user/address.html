@@ -1,0 +1,76 @@
+<!--# layout("/view/include/layout.html", {cur: "address"}) { -->
+<div id="main" class="clearfix">
+    <div class="blank"></div>
+    <!--# include("/view/include/left.html"){}-->
+    <div class="userCenterMain fr">
+        <div class="userOrderListAll">
+            <div class="userCenterWhere clearfix"><span class="bold">账户管理</span> &gt; 地址管理</div>
+            <div class="pointsRecord">
+                <div class="addAddress">
+                    <h3>新增地址</h3>
+                    <ul class="clearfix">
+                        <form method="post" action="${ctxPath}/user/saveAddress">
+                            <li><span><i>*</i>收货人</span>
+                                <input type="text" class="addressTxt" name="name">
+                            </li>
+                            <li><span><i>*</i>手机</span>
+                                <input type="text" class="addressTxt" name="mobile">
+                            </li>
+                            <li><span><i>*</i>地址</span>
+                                <input type="text" class="addressTxt addressTxtLong" name="address">
+                            </li>
+                            <li><span></span>
+                                <input type="submit" class="addressBtn" value="保存">
+                            </li>
+                        </form>
+                    </ul>
+                </div>
+                <div class="addressList">
+                    <h3>已保存的有效地址<span>（最多保存20个有效地址）</span></h3>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th width="15%">收货人</th>
+                            <th width="15%">联系电话</th>
+                            <th width="50%">详细地址</th>
+                            <th width="20%">操作</th>
+                        </tr>
+                        <!--# for(address in addressPage.list![]) { -->
+                        <tr>
+                            <td>${address.name}</td>
+                            <td>${address.mobile}</td>
+                            <td>${address.address}</td>
+                            <td><a href="${ctxPath}/user/removeAddress/${address.id}">删除</a></td>
+                        </tr>
+                        <!--# } elsefor { -->
+                        <tr>
+                            <td colspan="4">暂无相关数据</td>
+                        </tr>
+                        <!--# } -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <!--# include("/view/user/bottom.html"){}-->
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="../resource/js/plugin/slide.js"></script>
+<script src="../resource/js/jLamCatCustom.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var userCenterSiderNavLinks = $("div.userCenterSider").find("a");
+        $(userCenterSiderNavLinks).each(function (i) {
+            var links = $(userCenterSiderNavLinks).eq(i).attr("href"), myURL = document.URL;
+            if (myURL.indexOf(links) != -1) {
+                $(userCenterSiderNavLinks).eq(i).parent().addClass("current");
+            }
+        });
+        $(".uLikeWhat").slide({titCell: ".uLikeWhatTitle ul", mainCell: ".uLikeWhatScreen", effect: "leftLoop", autoPage: true, autoPlay: true});
+    });
+</script>
+</body>
+</html>

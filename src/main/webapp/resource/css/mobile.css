@@ -1,0 +1,21 @@
+﻿
+body,* {
+    white;
+    color: #656565;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #656565
+}
+
+.header{
+	 background-color:blue;
+	 height:60px;
+}
+
+.footer{
+	 background-color:red;
+	 height:60px;
+}

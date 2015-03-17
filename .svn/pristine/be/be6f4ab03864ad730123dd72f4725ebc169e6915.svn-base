@@ -1,0 +1,628 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>假日风光 云南旅游团购</title>
+    <meta name="keywords" content="云南旅游团购,丽江旅游团购,泸沽湖,团购,旅游团购"/>
+    <meta name="description"
+          content="假日风光（www.jiarifengguang.com）提供云南旅游，丽江旅游，云南自助游，旅游资讯，云南地图，云南旅游景点等信息，比云南旅游攻略更全的云南旅游必看资讯。假日风光，云南旅游资讯第一平台。"/>
+          
+    <script src="${ctxPath}/resource/js/changeTitle.js"></script>
+          
+  	<link href="${ctxPath}/resource/css/main.css" rel="stylesheet" type="text/css">
+   
+    <link href="${ctxPath}/resource/css/custom.css" rel="stylesheet" type="text/css">
+   
+    <link href="${ctxPath}/resource/css/meetingGroup.css" rel="stylesheet" type="text/css">
+    
+    <link href="${ctxPath}/resource/css/rimPart.css" rel="stylesheet" type="text/css">
+   
+   
+    <link href="${ctxPath}/resource/css/cart.css" rel="stylesheet" type="text/css">
+    
+    
+    <link href="${ctxPath}/resource/css/style.css" rel="stylesheet" type="text/css">
+    
+    <link href="${ctxPath}/resource/css/ui/juimin.css" rel="stylesheet" type="text/css">
+    <link href="${ctxPath}/resource/css/square/orange.css" rel="stylesheet" type="text/css">
+    
+    <link href="${ctxPath}/resource/css/css.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctxPath}/resource/css/qh.css" type="text/css" rel="stylesheet"/>
+  
+
+    <link href="${ctxPath}/resource/css/Public.css" type="text/css" rel="stylesheet"/>
+    
+    <script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F47a017dda441736ad67e0aa4745a5dac' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	
+	<script type="text/javascript">
+		var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cspan id='cnzz_stat_icon_1000296157'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1000296157' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	
+	<!-- WPA Button Begin -->
+		<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAzMDU5N18xMTk4NTBfNDAwODQ4ODA5OV8"></script>
+	<!-- WPA Button END -->
+	
+	<!--
+	<script>
+		A=document.getElementById
+		B=document.all;
+		C=document.layers;
+		T1=new Array("${ctxPath}/resource/mouseimages/trail1.gif",38,35,"${ctxPath}/resource/mouseimages/trail2.gif",30,31,"${ctxPath}/resource/mouseimages/trail3.gif",28,26,"${ctxPath}/resource/mouseimages/trail4.gif",22,21,"${ctxPath}/resource/mouseimages/trail5.gif",16,16,"${ctxPath}/resource/mouseimages/trail6.gif",10,10)
+		
+		//T1=new Array("${ctxPath}/resource/mouseimages/trail4.gif",22,21,"${ctxPath}/resource/mouseimages/trail5.gif",16,16,"${ctxPath}/resource/mouseimages/trail6.gif",10,10)
+		 
+		var offsetx=15 
+		var offsety=10 
+		
+		nos=parseInt(T1.length/3)
+		rate=50
+		ie5fix1=0;
+		ie5fix2=0;
+		rightedge=B? document.body.clientWidth-T1[1] : window.innerWidth-T1[1]-20
+		bottomedge=B? document.body.scrollTop+document.body.clientHeight-T1[2] : window.pageYOffset+window.innerHeight-T1[2]
+		 
+		for (i=0;i<nos;i++){
+		createContainer("CUR"+i,i*10,i*10,i*3+1,i*3+2,"","<img src='"+T1[i*3]+"' width="+T1[(i*3+1)]+" height="+T1[(i*3+2)]+" border=0>")
+		}
+		 
+		function createContainer(N,Xp,Yp,W,H,At,HT,Op,St){
+		with (document){
+		write((!A && !B) ? "<layer id='"+N+"' left="+Xp+" top="+Yp+" width="+W+" height="+H : "<div  id='"+N+"'"+" style='position:absolute;left:"+Xp+"; top:"+Yp+"; width:"+W+"; height:"+H+"; z-index:9999");
+		if(St){
+		if (C)
+		write(" style='");
+		write(St+";' ")
+		}
+		else write((A || B)?"'":"");
+		write((At)? At+">" : ">");
+		write((HT) ? HT : "");
+		if (!Op)
+		closeContainer(N)
+		}
+		}
+		 
+		function closeContainer(){
+		document.write((A || B)?"</div>":"</layer>")
+		}
+		 
+		function getXpos(N){
+		if (A)
+		return parseInt(document.getElementById(N).style.left)
+		else if (B)
+		return parseInt(B[N].style.left)
+		else
+		return C[N].left
+		}
+		 
+		function getYpos(N){
+		if (A)
+		return parseInt(document.getElementById(N).style.top)
+		else if (B)
+		return parseInt(B[N].style.top)
+		else
+		return C[N].top
+		}
+		 
+		function moveContainer(N,DX,DY){
+		c=(A)? document.getElementById(N).style : (B)? B[N].style : (C)? C[N] : "";
+		if (!B){
+		rightedge=window.innerWidth-T1[1]-20
+		bottomedge=window.pageYOffset+window.innerHeight-T1[2]
+		}
+		c.left=Math.min(rightedge, DX+offsetx);
+		c.top=Math.min(bottomedge, DY+offsety);
+		}
+		function cycle(){
+		//if (IE5) 
+		if (document.all&&window.print){
+		ie5fix1=document.body.scrollLeft;
+		ie5fix2=document.body.scrollTop;
+		}
+		for (i=0;i<(nos-1);i++){
+		moveContainer("CUR"+i,getXpos("CUR"+(i+1)),getYpos("CUR"+(i+1)))
+		}
+		}
+		 
+		function newPos(e){
+		moveContainer("CUR"+(nos-1),(B)?event.clientX+ie5fix1:e.pageX+2,(B)?event.clientY+ie5fix2:e.pageY+2)
+		}
+		 
+		function getedgesIE(){
+		rightedge=document.body.clientWidth-T1[1]
+		bottomedge=document.body.scrollHeight-T1[2]
+		}
+		 
+		if (B){
+		window.onload=getedgesIE
+		window.onresize=getedgesIE
+		}
+		 
+		if(document.layers)
+		document.captureEvents(Event.MOUSEMOVE)
+		document.onmousemove=newPos
+		setInterval("cycle()",rate)
+	</script>
+      -->
+</head>
+
+    
+ <body>
+ 
+ <div id="revision_head">
+  <div class="revision_top">
+    <div class="revision_toper">
+    <div class="revision_top_left"><img src="${ctxPath}/resource/images/tellpe.png" width="271" height="30" />  
+    </div>
+    <div class="revision_top_right">
+      <ul>
+
+           <li>
+                <!--# if(empty('member') ){ -->
+                <a href="${ctxPath}/login">[登陆]</a>
+                <!--# if(cur!'' == 'home') { -->
+                <a href="${ctxPath}/sign?redirect=/user/info">[注册]</a>
+                <!--# } else { -->
+                <a href="${ctxPath}/sign?redirect=${cururl}">[注册]</a>
+                <!--# } -->
+                <a href="${ctxPath}/cart" class="cartTop fntGray"><img src="${ctxPath}/resource/images/shopbuy.png" width="30" height="30" />购物车</a><i >${cartList.~size!0}</i>
+                <!--# } else { -->
+                <a href="${ctxPath}/user/order"><strong>${member.username}</strong></a> |
+                <a href="${ctxPath}/user/order" class="fntGray">查询订单</a> |
+                <a href="${ctxPath}/cart" class="cartTop fntGray"><img src="${ctxPath}/resource/images/shopbuy.png" width="30" height="30" />购物车</a><i >${member.cart.~size!0}</i>
+                |
+                <a href="${ctxPath}/logout">[退出]</a>
+                <!--#  }-->
+            </li>
+
+      </ul>
+    </div>
+    </div>
+   </div> 
+      <div class="revision_toper">
+	  	<div class="revision_toperLeft">
+	        <div class="logo"><img src="${ctxPath}/resource/images/logo.jpg" /></div>
+	        <div class="Search">
+		        	<input name="searchKey" id="searchKey" type="text" class="textbox1" onkeydown= "if(event.keyCode==13)search();" />
+		        	<input name="" type="button" class="butbox1" onclick="search();" />
+	        	<div class="searchKeywords">
+			       	 热门：
+			        <!--# for(target in targetPage.list![]) { -->
+			        <a href="${ctxPath}/line?target=${target.name}"   target="_blank">${target.name}</a>
+			        <!--# } -->
+			    </div>
+			</div>
+	     </div>
+    	 <div class="revision_toperRight"><img src="${ctxPath}/resource/images/topright.jpg" /></div>
+       </div>
+    <div class="revision_allnav">
+    <div class="revision_nav">
+      <div class="revision_navleft">
+        <ul>
+          <!-- <li><img src="${ctxPath}/resource/images/all.png" /></li> -->
+          <li class="<!--# if(cur!'' == 'home') { print('nav_bj'); } -->"><a href="${ctxPath}/"><img src="${ctxPath}/resource/images/nav_1.png" /></a></li>
+          <li class="<!--# if(cur!'' == 'line') { print('nav_bj'); } -->"><a href="${ctxPath}/line"><img src="${ctxPath}/resource/images/nav_2.png" /></a></li>
+          <li class="<!--# if(cur!'' == 'car') { print('nav_bj'); } -->"><a href="${ctxPath}/car"><img src="${ctxPath}/resource/images/nav_3.png" /></a></li>
+          <li class="<!--# if(cur!'' == 'ticket') { print('nav_bj'); } -->"><a href="${ctxPath}/ticket"><img src="${ctxPath}/resource/images/nav_4.png" /></a></li>
+          <li class="<!--# if(cur!'' == 'hotel') { print('nav_bj'); } -->"><a href="${ctxPath}/hotel"><img src="${ctxPath}/resource/images/nav_5.png" /></a></li>
+          <li class="<!--# if(cur!'' == 'custom') { print('nav_bj'); } -->"><a href="${ctxPath}/custom"><img src="${ctxPath}/resource/images/nav_6.png" /></a></li>
+        </ul>
+      </div>
+      
+      
+      <div class="menuCat" id="menuCat">
+          <h6><img src="${ctxPath}/resource/images/all.png" /></h6>
+          <div class="menuBJ">
+          <div class="siderCat" id="siderCat" style="display:none; ">
+          
+            <div class="siderCatItem">
+                <img src="${ctxPath}/resource/images/tuan.jpg">
+                <div class="siderCatItemMain" id="siderCatBJ_1" style="display: none; ">
+                    <div class="siderCatItemMainLeft fl">
+                    <!--# for(lineLabel in lineLabelPage.list![]) { -->
+                    <!--# if(lineLabel_index < 5) { -->
+                    	
+                    	<div class="contLi">
+                         <div class="Lileft">
+                         <div class="Liclass">${lineLabel.name!}</div>
+                         <div class="Lilist"><a href="${ctxPath}/line">全部</a></div></div>
+                         <div class="Liright">
+	                         <ul>
+	                         <!--# for(child in lineLabel.children![]) { -->
+	                         <li><a href="${ctxPath}/line?label=${child.name}">${child.name}</a></li>
+	                         <!--# } -->
+	                         
+	                         </ul>
+                         </div>
+                       </div>
+                    <!--# } -->
+                    <!--# } -->
+                    
+                    </div>
+                    <div class="siderCatItemMainRight">
+                       <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="siderCatItem">
+                <img src="${ctxPath}/resource/images/ziyou.jpg">
+                <div class="siderCatItemMain" id="siderCatBJ_2" style="display: none; ">
+                    <div class="siderCatItemMainLeft fl">
+                    <!--# for(otherLabel in otherLabelPage.list![]) { -->
+                       <div class="contLi">
+                         <div class="Lileft">
+                         <div class="Liclass_hs">${otherLabel.name}</div>
+                         <div class="Lilist_hs"><a href="${ctxPath}/hotel">全部</a></div></div>
+                         <div class="Liright">
+                         	<ul>
+                         		<!--# for(child in otherLabel.children![]) { -->
+                                <li><a href="${ctxPath}/${otherLabel.production}?label=${child.name}">${child.name}</a>
+                                </li>
+                                <!--# } -->
+                         	</ul>
+                         </div>
+                       </div>
+                    <!--# } -->   
+                    </div>
+                    <div class="siderCatItemMainRight">
+                       <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="siderCatItem">
+                <img src="${ctxPath}/resource/images/mudi.jpg">
+                <div class="siderCatItemMain" id="siderCatBJ_3" style="display: none; ">
+                    <div class="siderCatItemMainLeft fl">
+                    	<!--# for(target in targetPage.list![]) { -->
+	                    	<!--# if(target_index < 5) { -->
+	                        <div class="contLi">
+	                         <div class="Lileft">
+	                         <div class="Liclass_ls">${target.name}</div>
+	                         <div class="Lilist_ls"><a href="${ctxPath}/line">全部</a></div></div>
+	                         <div class="Liright">
+		                         <ul>
+		                         	<!--# for(child in target.children![]) { -->
+	                                <li><a href="${ctxPath}/line?target=${child.name}">${child.name}</a></li>
+	                                <!--# } -->
+		                         </ul>
+	                         </div>
+	                       </div>
+	                       <!--# } -->   
+                       <!--# } -->   
+                    </div>
+                    <div class="siderCatItemMainRight">
+                       <!--# include("/view/include/tbtj.html") {} -->
+                    </div>
+                </div>
+            </div>
+            <div class="siderCatItem siderCatItemBg4">
+                <img src="${ctxPath}/resource/images/dingzhi.jpg">
+            </div>
+         </div>
+        </div>
+        </div> 
+        
+        
+        <script src="${ctxPath}/resource/js/jquery.js"></script>
+		<script src="${ctxPath}/resource/js/jLamCustom.js"></script>
+		<script src="${ctxPath}/resource/js/jquery.lazyload.min.js"></script>
+		<!--<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+		 列表页面加上js判断 -->
+      
+      
+     <div class="revision_navright">
+        <ul>
+          <li class="item1"><img src="${ctxPath}/resource/images/tellright.png" />关注我们:</li>
+          <li class="item2" id="btnOpenWx"><a href="javascript:void(0)"><img src="${ctxPath}/resource/images/weixin.png" />加微信</a>
+              <ul style="display: none; ">
+                    <li><img src="${ctxPath}/resource/images/erwSml.png" width="128" height="128" alt="假日风光微信二维码"></li>
+                    <h6>扫描关注我们</h6>
+                </ul>
+          </li>
+          <li class="item3" id="btnOpenWb"><a href="javascript:void(0)"><img src="${ctxPath}/resource/images/sinaright.png" />加微博</a>
+              <ul style="display: none; ">
+                    <li><img src="${ctxPath}/resource/images/weibo.jpg" width="128" height="128" alt="假日风光微博二维码"></li>
+                    <h6>扫描关注我们</h6>
+                </ul>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    </div>
+   </div> 
+ 
+ 
+    <div id="revision_main">
+     <div class="tg_mian">
+       <div class="tg_banner">
+         <img src="${ctxPath}/resource/images/x_03.jpg" width="1000px" height="290" alt="旅游团购" />
+       </div>
+       <ul>
+       
+         <li>
+		<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539830642223e70669c0278a')">
+         	<div class="tg_img"><img src="${ctxPath}/resource/images/tg-1.jpg" width="492" height="322" alt="丽江" />
+         		<div class="tg_topimg"><img src="${ctxPath}/resource/images/tg_img.png" width="128" height="73" alt="团购" /></div>
+         	</div>
+		</a>
+         	
+         	<div class="tg_text"><div class="tg_title">
+			<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539830642223e70669c0278a')">
+         			<img src="${ctxPath}/resource/images/sf.jpg" alt="双飞" />全国双飞昆明大理丽江6日游<p>全国双飞出发、轻松经典线路、全程精品服务</p>
+			</a>
+         			<!--# for(goods in goodsPages.list![]) { -->
+	         			<!--# if(goods.id=="539830642223e70669c0278a") { -->
+		         		<div class="tg_sl"><span>${goods.sales}</span>人已购买</div></div>
+		         		<!--# } -->
+	         		<!--# } -->
+	         		<div class="tg_time">
+	         			<img src="${ctxPath}/resource/images/clock.jpg" /><div id="divdown1"></div>
+	         		</div>
+         	</div>
+         	<div class="tg_shop">
+			<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539830642223e70669c0278a')">
+	            		<div class="tg_shoper">
+	            			<span class="tg_jg">￥1980</span> 
+	            			<span class="tg_yj">￥3688</span> 
+	            			<span class="tg_gm">立即购买</span>
+	            		</div>
+			</a>
+                </div>
+         </li>
+         
+         <li>
+		<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539950822223e70669c02828')">
+         	<div class="tg_img">
+         		<img src="${ctxPath}/resource/images/tg-2.jpg" width="492" height="322" alt="丽江" />
+         		<div class="tg_topimg"><img src="${ctxPath}/resource/images/tg_img.png" width="128" height="73" alt="团购" /></div>
+        	</div>
+		</a>
+        	<div class="tg_text">
+	        	<div class="tg_title">
+				<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539950822223e70669c02828')">
+		        	<img src="${ctxPath}/resource/images/sf.jpg" alt="双飞" />双飞昆大丽香8日游<p>全国双飞出发、玩遍七彩云南、全程精品服务</p>
+				</a>
+		        	<!--# for(goods in goodsPages.list![]) { -->
+			        	<!--# if(goods.id=="539950822223e70669c02828") { -->
+			        	<div class="tg_sl"><span>${goods.sales}</span>人已购买</div>
+			        	<!--# } -->
+		        	<!--# } -->
+        		</div>
+	        	<div class="tg_time">
+	        		<img src="${ctxPath}/resource/images/clock.jpg" /><div id="divdown2"></div>
+	        	</div>
+	        	
+        	</div>
+       		<div class="tg_shop">
+			<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539950822223e70669c02828')">
+          		<div class="tg_shoper">
+          			<span class="tg_jg">￥2399</span> 
+          			<span class="tg_yj">￥4088</span> 
+          			<span class="tg_gm">立即购买</span>
+          		</div>
+			</a>
+       		</div>
+         </li>
+
+         
+         <li>
+		<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539942812223e70669c0280c')">
+         	<div class="tg_img"><img src="${ctxPath}/resource/images/tg-3.jpg" width="492" height="322" alt="丽江" />
+	         	<div class="tg_topimg">
+	         		<img src="${ctxPath}/resource/images/tg_img_1.png" width="128" height="73" alt="团购" />
+	         	</div>
+         	</div>
+		</a>
+         	<div class="tg_text">
+	         	<div class="tg_title">
+				<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539942812223e70669c0280c')">
+	         		<img src="${ctxPath}/resource/images/cw.jpg" alt="双飞" />玉龙雪山纯玩1日游<p>含印象丽江门票、赠送雪山三宝、海拔5596米</p>
+				</a>
+	         		<!--# for(goods in goodsPages.list![]) { -->
+		         		<!--# if(goods.id=="539942812223e70669c0280c") { -->
+		         		<div class="tg_sl"><span>${goods.sales}</span>人已购买</div>
+		         		<!--# } -->
+	         		<!--# } -->
+	         	</div>
+	         	<div class="tg_time">
+	         		<img src="${ctxPath}/resource/images/clock.jpg" /><div id="divdown3"></div>
+	         	</div>
+         	</div>
+         	<div class="tg_shop">
+			<a href="javascript:void(0);"  onclick="openWindows('http://www.jiarifengguang.com/detail/539942812223e70669c0280c')">
+           		<div class="tg_shoper">
+           			<span class="tg_jg">￥618</span>
+           		    <span class="tg_yj">￥1497</span> 
+           		    <span class="tg_gm">立即购买</span>
+           		</div>
+			</a>
+            	</div>
+         </li>
+           
+           
+           
+         <li>
+                <a href="javascript:void(0);" onclick="openWindows('http://www.jiarifengguang.com/detail/539962af2223e70669c0285d')" >
+         	<div class="tg_img">
+         		<img src="${ctxPath}/resource/images/tg-4.jpg" width="492" height="322" alt="丽江" />
+         		<div class="tg_topimg"><img src="${ctxPath}/resource/images/tg_img_1.png" width="128" height="73" alt="团购" /></div>
+         	</div>
+		</a>
+         	<div class="tg_text">
+         		<div class="tg_title">
+				<a href="javascript:void(0);" onclick="openWindows('http://www.jiarifengguang.com/detail/539962af2223e70669c0285d')" >
+         			<img src="${ctxPath}/resource/images/cw.jpg" alt="双飞" />拉市海精品1日游<p>优质自营马场、不限时皮划艇、豪华商务车接送</p>
+				</a>
+         			<!--# for(goods in goodsPages.list![]) { -->
+	         			<!--# if(goods.id=="539962af2223e70669c0285d") { -->
+	         			<div class="tg_sl"><span>${goods.sales}</span>人已购买</div>
+	         			<!--# } -->
+         			<!--# } -->
+         		</div>
+         		<div class="tg_time">
+         			<img src="${ctxPath}/resource/images/clock.jpg" /><div id="divdown4"></div>
+         		</div>
+         	</div>
+         	<div class="tg_shop">
+		<a href="javascript:void(0);" onclick="openWindows('http://www.jiarifengguang.com/detail/539962af2223e70669c0285d')" >
+            	<div class="tg_shoper">
+	            	<span class="tg_jg">￥118</span> 
+	            	<span class="tg_yj">￥240</span> 
+	            	<span class="tg_gm">立即购买</span>
+            	</div>
+ 		</a>
+            	</div>
+		
+        </li>
+        
+        
+        
+       </ul>
+     </div>
+  </div>
+  
+  
+  <div id="floatServiceWrap" >
+	    <div class="goTop"><img src="${ctxPath}/resource/images/top.jpg" /></div>
+		<div class="telllulu"><a><img src="${ctxPath}/resource/images/tell.jpg" /></a><div class="tellbox"><img src="${ctxPath}/resource/images/tellbox.jpg" /></div></div>
+	    
+	    <div class="online">
+	    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODAzMDU5N18xMzUxNzVfNDAwODQ4ODA5OV8yXw"
+	               target="_blank"><img src="${ctxPath}/resource/images/qq.gif" /></a>
+	    </div>
+	     <!--# if(cur!'' == 'home'){ -->
+	     <ul>
+		     <li><div class="floattext"><a href="#seconder_xl">品质长线</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#seconder">热门短线</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#Third">景区门票</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#Fourth">特价酒店</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#Fifth">旅游资讯</a></div>
+		     </li>
+	     </ul>
+	     <!--# } -->
+	     
+	     <!--# if(cur!'' == 'detail-line'){ -->
+	     <ul>
+		     <li><div class="floattext"> <a href="#_xlts">线路特色</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#_xcsm">行程说明</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#_fysm">费用说明</a></div>
+		     </li>
+		     <li><div class="floattext"><a href="#_wxts">温馨提示</a></div>
+		     </li>
+		     <li><div class="floattext"> <a href="#_ydzn">预订指南</a></div>
+		     </li>
+	     </ul>
+	      <!--# } --> 
+      
+	</div>
+  
+</body>   
+</html>
+
+
+
+<script src="${ctxPath}/resource/js/fudong.js"></script>
+<script src="${ctxPath}/resource/js/jLamCustom.js"></script>
+
+<script src="${ctxPath}/resource/js/jquery.js"></script>
+<script src="${ctxPath}/resource/js/jLamCustom.js"></script>
+<script src="${ctxPath}/resource/js/jquery.lazyload.min.js"></script>
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+
+<script language="javascript" type="text/javascript"> 
+	var interval = 1000; 
+	function ShowCountDown(year,month,day,divname) 
+	{ 
+		var now = new Date();
+		
+		//alert(now.getDate());
+		
+		var endDate = new Date(year, month-1, day); 
+		var leftTime=endDate.getTime()-now.getTime(); 
+		var leftsecond = parseInt(leftTime/1000); 
+		//var day1=parseInt(leftsecond/(24*60*60*6)); 
+		var day1=Math.floor(leftsecond/(60*60*24)); 
+		var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+		var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+		var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+		var cc = document.getElementById(divname); 
+		//cc.innerHTML =year+"年"+month+"月"+day+"日还有："+day1+"天"+hour+"小时"+minute+"分"+second+"秒"; 
+		cc.innerHTML ="还剩："+day1+"天"+hour+"小时"+minute+"分"+second+"秒"; 
+	} 
+	
+	function ShowCountDown(divname) 
+	{ 
+		var now = new Date();
+		var year=now.getFullYear();
+		var month=now.getMonth();
+		var day=now.getDate();
+
+		var endDate = new Date(year, month, day+7); 
+		var leftTime=endDate.getTime()-now.getTime(); 
+		var leftsecond = parseInt(leftTime/1000); 
+		//var day1=parseInt(leftsecond/(24*60*60*6)); 
+		var day1=Math.floor(leftsecond/(60*60*24)); 
+		var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+		var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+		var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+		var cc = document.getElementById(divname); 
+		cc.innerHTML ="还剩："+day1+"天"+hour+"小时"+minute+"分"+second+"秒"; 
+	} 
+	
+	
+	//window.setInterval(function(){ShowCountDown(2015,4,20,'divdown1');}, interval); 
+	window.setInterval(function(){ShowCountDown('divdown1');}, interval); 
+	window.setInterval(function(){ShowCountDown('divdown2');}, interval); 
+	window.setInterval(function(){ShowCountDown('divdown3');}, interval); 
+	window.setInterval(function(){ShowCountDown('divdown4');}, interval); 
+	
+	
+	function openWindows(url)
+	{
+		window.open(url);
+	}
+	
+	
+</script> 
+
+ <script>
+    function search()
+    {
+		
+    	if(document.getElementById("searchKey").value=="")
+       	{
+       		alert("请输入关键词后再进行搜索！");
+       		return;
+       	}
+    	
+       	if(document.getElementById("searchKey").value=="")
+       	{
+       		return;
+       	}
+       	
+       	var searchKey=document.getElementById("searchKey").value;
+       	
+       	if(document.getElementById("searchKey").value!="")
+       	{
+       		
+       		var action="/all?target="+searchKey;
+       		
+       		window.open(action);
+       	}
+      
+    }
+</script>
+    
+

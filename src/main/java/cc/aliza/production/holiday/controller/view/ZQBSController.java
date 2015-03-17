@@ -1,0 +1,25 @@
+package cc.aliza.production.holiday.controller.view;
+
+import cc.aliza.production.holiday.dao.ArgDao;
+import cc.aliza.production.holiday.dao.CommentDao;
+import cc.aliza.production.holiday.dao.GoodsDao;
+import cc.aliza.production.holiday.entity.Arg;
+import cc.aliza.production.holiday.entity.Goods;
+import cc.aliza.production.holiday.interceptor.view.DataInterceptor;
+import com.bugull.mongo.BuguMapper;
+import com.jfinal.aop.Before;
+import com.jfinal.core.Controller;
+import com.jfinal.plugin.activerecord.Page;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+/**
+ * Created by Jing on 14-2-16.
+ */
+@Before(DataInterceptor.class)
+public class ZQBSController extends Controller {
+    public void index() {
+    	render("/view/zqbs/zqbs.html");
+    }
+}

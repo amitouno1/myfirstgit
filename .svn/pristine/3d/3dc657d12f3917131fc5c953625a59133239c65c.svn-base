@@ -1,0 +1,446 @@
+<!--# layout("/view/include/layout.html", {cur: 'home'}) { -->
+<div id="revision_main">
+
+<div class="nav_banner">
+	<div id="revision_banner">
+   	<ul>
+	   	<!--# if(LBADPage.totalRow!0 > 0) { -->
+	  	    <!--# for(ad in LBADPage.list![]) { -->
+	 		 <li>
+	 		 		<a href="${ctxPath}/rest/redirect?target=${ad.url!'#'}" target="_blank">
+	 		 		<img src="${ctxPath}/rest/image/${ad.image!}" style="width:890px; height:400px;"/></a>
+	           </li>
+	        <!--# } -->
+		<!--# } -->
+	</ul>
+    <script type="text/javascript" src="${ctxPath}/resource/js/jquerymin.js"></script>
+	<script type="text/javascript" src="${ctxPath}/resource/js/huandeng.js"></script>
+   	</div>
+ </div>
+    
+  <div id="revision_mid">
+    <div id="frister">
+    
+      <!-- 行程精选 -->
+      <div class="frister_left">
+      
+        <div class="nav_title"> 
+        	<span style="display:none;"><a href="${ctxPath}/line">更多>></a></span><img src="${ctxPath}/resource/images/jpxc.png" />行程精选 
+        </div>
+       	<ul>
+       	
+       	<!--# for(goods in hotLineGoodsPage.list![]) { -->
+       		<!--# if(goods.code=='xcjx_view') { -->
+	         <li>
+	         	<a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">
+	         		<img style=" width:165px;height:165px;" src="${ctxPath}/rest/image/${goods.master!}" />
+	         	</a>
+	         	<div class="frister_text">
+	         		<div class="yh14" style=" width: 150px;height:50px">
+	         			<a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">${goods.name}</a>
+	         		</div>
+	         		
+	         		<!--# var id1='53055b782748774781312cb1'; -->
+			   		<!--# var ids1; -->
+			   		<!--# var name1; -->
+			   		
+	                <!--# for(arg1 in goods.args![]) { 
+	                	ids1 =arg1.id; 
+	                	for(argsP1 in argsPage.list![]) { 
+	                		
+	                		if(argsP1.father.id![]==id1&&ids1==argsP1.id)
+	                		{
+	           					name1=argsP1.name;
+	           				}
+	                	}
+	                	
+	                } -->
+	                
+	                <!--# var id2='53055b782748774781312cb0'; -->
+			   		<!--# var ids2; -->
+			   		<!--# var name2; -->
+			   		
+                    <!--# for(arg2 in goods.args![]) { 
+	                	ids2 =arg2.id; 
+	                	
+	                	for(argsP2 in argsPage.list![]) { 
+	                		
+	                		if(argsP2.father.id![]==id2&&ids2==argsP2.id)
+	                		{
+	           					name2=argsP2.name;
+	           				}
+	                	} 
+	                	
+	                 } -->
+	                
+			        <div class="yh18">${name1!}&nbsp;</div>
+			        
+	         		<div class="yh12">${name2!}出发&nbsp;</div>
+	         	</div>
+	         		
+         		<div class="frister_text" style="background:url(images/line_w.jpg) repeat-x top">
+         			<div class="yh24">￥${(goods.minRealPrice!0) / 100}<br />
+         				<a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}"><img src="${ctxPath}/resource/images/ljgm.jpg" /></a>
+         			</div>
+         		</div>
+        	</li>
+        	 <!--# } -->
+        	
+         <!--# } -->
+         
+       	</ul>
+      </div>
+
+      <div class="frister_right" >
+        <div class="nav_title"><img src="${ctxPath}/resource/images/jpjd.png" />精品景点    
+        </div>
+        <div class="frister_pic">
+        
+          <div class="pic_img"><img src="${ctxPath}/resource/images/n_18.jpg" width="310" height="199" /></div>
+          
+          <div class="pic_text"><div class="yh14">丽江-玉龙雪山</div>
+          <div style="height:77px;">
+          	文字范例文字范例文字范例文字范例文字范文字范例文字范例文字范例文字范例文字范例文字范例......
+		  </div>
+          <div class="pic_but"><img src="${ctxPath}/resource/images/ckqw.jpg" /></div></div>    
+          
+          <!--# for (play in playPage.list![]) { -->
+          
+          <!--# } -->
+               
+        </div>
+      </div>
+    </div>
+    
+    <!-- 品质长线 -->
+    <div id="seconder">
+      <div class="nav_banner">
+        <div class="nav_left"><img src="${ctxPath}/resource/images/nav_F1.png" /></div>
+        <div class="nav_right"><img src="${ctxPath}/resource/images/nav_F2.png" /></div>
+      </div>
+      
+      <div class="seconder_left">
+      	 <!--# for(goods in hotLineGoodsPage.list![]) { -->
+      	 <!--# if(goods.code=='pzcx_top') { -->
+      	 <a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">
+      		<img src="${ctxPath}/rest/image/${goods.master!}" width="253" height="320" />
+      	 </a>
+      	 <!--# } -->
+         <!--# } -->
+      </div>
+      
+      <div class="seconder_right">
+        <ul class="second_top">
+        
+    	    <!--#  var k=1; for(goods in hotLineGoodsPage.list![]) { -->
+	        <!--# if(goods.code=='pzcx_view'&&k<=4) { -->
+	        
+	        
+	        <!--# var id3='53055b782748774781312cb1'; -->
+	   		<!--# var ids3; -->
+	   		<!--# var name3; -->			   		
+	   		
+               <!--# for(arg3 in goods.args![]) { 
+               	ids3 =arg3.id; 
+               	for(argsP3 in argsPage.list![]) { 
+               		
+               		if(argsP3.father.id![]==id3&&ids3==argsP3.id)
+               		{
+        				name3=argsP3.name;
+        			}
+               	}
+	                	
+              } -->
+	        
+ 	        <li>
+ 	        	<a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">
+	 	        	<img src="${ctxPath}/rest/image/${goods.master!}" width="165" height="164" />
+	 	        	<div class="yh12small">·${goods.name}</div>
+	 	        </a>
+	 	        
+	 	        <div class="yh14red"><span>￥${(goods.minRealPrice!0) / 100}</span>· ${name3}游</div>
+ 	        </li>
+	      	<!--# k=k+1;} -->
+	        <!--# } -->
+        </ul>
+        
+        <ul class="second_down">
+        
+        	
+        	<!--# for(goods in hotLineGoodsPage.list![]) { -->
+	        <!--#   if((goods.code=='pzcx_view'||goods.code=='pzcx_top')) { -->
+	        
+	      	<li><a href="${ctxPath}/detail/${goods.id}" target="_blank"><span class="red">￥${(goods.minRealPrice!0) / 100}</span>· ${goods.name}</a></li>
+        
+       		<!--#  } -->
+	        <!--# } -->
+          
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 品质短线 -->
+    <div id="seconder">
+      <div class="nav_banner">
+        <div class="nav_left"><img src="${ctxPath}/resource/images/nav_s1.png" /></div>
+        <div class="nav_right"><img src="${ctxPath}/resource/images/nav_s2.png" /></div>
+      </div>
+      <div class="seconder_left">
+       <!--# for(goods in hotLineGoodsPage.list![]) { -->
+      	 <!--# if(goods.code=='pzdx_top') { -->
+      	 <a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">
+      		<img src="${ctxPath}/rest/image/${goods.master!}" width="253" height="320" />
+      	 </a>
+      	 <!--# } -->
+         <!--# } -->
+      </div>
+      <div class="seconder_right">
+        <ul class="second_top">
+        	<!--# var kk=1; for(goods in hotLineGoodsPage.list![]) { -->
+	        <!--# if(goods.code=='pzdx_view'&&kk<=4) { -->
+	        
+	        <!--# var id3='53055b782748774781312cb1'; -->
+	   		<!--# var ids3; -->
+	   		<!--# var name3; -->			   		
+	   		
+               <!--# for(arg3 in goods.args![]) { 
+               	ids3 =arg3.id; 
+               	for(argsP3 in argsPage.list![]) { 
+               		
+               		if(argsP3.father.id![]==id3&&ids3==argsP3.id)
+               		{
+          				name3=argsP3.name;
+          			}
+               	}
+	                	
+              } -->
+	        
+ 	        <li>
+ 	        	<a href="${ctxPath}/detail/${goods.id}" target="_blank" style="height: 20px; width: 150px;" title="${goods.name}">
+	 	        	<img src="${ctxPath}/rest/image/${goods.master!}" width="165" height="164" />
+	 	        	<div class="yh12small">·${goods.name}</div>
+	 	        </a>
+	 	        
+	 	        <div class="yh14red"><span>￥${(goods.minRealPrice!0) / 100}</span>· ${name3}游</div>
+ 	        </li>
+	      	<!--# kk=kk+1;} -->
+	        <!--# } -->
+        </ul>
+        
+        <ul class="second_down">
+         	<!--# for(goods in hotLineGoodsPage.list![]) { -->
+	        <!--# if(goods.code=='pzdx_view'||goods.code=='pzdx_top') { -->
+	        
+	      	<li><a href="${ctxPath}/detail/${goods.id}" target="_blank"><span class="red">￥${(goods.minRealPrice!0) / 100}</span>· ${goods.name}</a></li>
+        
+       		<!--# } -->
+	        <!--# } -->
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 景点门票 -->
+    <div id="Third">
+      <div class="nav_banner">
+        <div class="nav_left"><img src="${ctxPath}/resource/images/nav_t1.png" /></div>
+        <div class="nav_right"><img src="${ctxPath}/resource/images/nav_t2.png" /></div>
+      </div>
+           
+      <ul >
+      	<!--# var j=1;   -->
+        <!--# for(goods in hotTicketGoodsPage.list![]) { -->
+        	
+        	<!--#   if(goods.code=='jqmp_view') { -->
+        		<!--#   if(j<=3) { -->
+        		
+		       	<li style="margin-right:0px">
+			       	<a href="${ctxPath}/detail/${goods.id}" target="_blank">
+	        		<div class="third_left"><img src="${ctxPath}/rest/image/${goods.master!}"  style="width:164px;height:164px"/></div>
+	        		<div class="third_right">
+	        			<div class="third_text">
+	        				<div class="yh12small">${goods.name}</div>
+			      			<div class="yh14green">￥${(goods.minRealPrice!0) / 100}/张</div>
+			      			<div>${goods.caption}</div>
+	        			</div>
+	        		</div>
+	        		</a>
+		       	</li>
+	       	 	<!--# } -->
+	       	 	
+	       	 	<!--#   if(j==3) { -->
+	       	 	</ul>
+	       	 	<!--# } -->
+	       	 	
+	       	 	<!--#   if(j==4) { -->
+	       	 	<ul>
+	       	 	<!--# } -->
+	       	 	
+	       	 	<!--#   if(j>=4) { -->
+	       	 		<li style="margin-right:0px">
+			        	<a href="${ctxPath}/detail/${goods.id}">
+			        		<div class="third_right">
+			        			<div class="third_text">
+				        			<div class="yh12small">${goods.name}</div>
+				        			<div class="yh14green">￥${(goods.minRealPrice!0) / 100}/张</div>
+				        			${(goods.caption)}
+				        		</div>
+				        	</div>
+				        	<div class="third_left"><img src="${ctxPath}/rest/image/${goods.master!}" style="width:164px;height:164px"/></div>
+				        </a>
+				    </li>
+	       	 	<!--# } -->
+	       	<!--#  } -->
+        <!--# j=j+1; } -->
+        
+        <!--#   if(j>=4) { -->
+    	  </ul>
+    	<!--# } -->
+      
+    </div>
+    
+    <!-- 特价酒店 -->
+    <div id="Fourth">
+      <div class="nav_banner">
+        <div class="nav_left"><img src="${ctxPath}/resource/images/nav_Ft1.png" /></div>
+        <div class="nav_right"><a href="#"><img src="${ctxPath}/resource/images/nav_Ft2.png" /></a></div>
+      </div>
+      <ul>
+      	<!--# var i=1;   -->
+        <!--# for(goods in hotHotelGoodsPage.list![]) { -->
+        	<!--#   if(goods.code=='tjjd_view'&&i<=4) { -->
+	       	<li style="margin-right:0px;">
+		       	<a href="${ctxPath}/detail/${goods.id}" target="_blank">
+		        	<div id="Ft_1"><img src="${ctxPath}/rest/image/${goods.master!}" style="width:244px;height:244px"/></div>
+			        <div class="Furth_text">
+			        <div class="yh14">${goods.name}</div>
+			        <div class="yh14bule">特价：<span class="yh24bule">${goods.minRealPrice!/100}</span>元起</div>
+			        <div class="yh14Grey"><samp><img src="${ctxPath}/resource/images/five.png" /></samp>原价：<span>${goods.minPrice!/100}</span></div>
+			        </div>
+		        </a>
+	       	</li>
+	       	<!--# i=i+1; } -->
+        <!--# } -->
+        
+      </ul>
+    </div>
+    
+    
+    
+    <div id="Fifth">
+       <div class="nav_banner">
+        <div class="nav_left"><img src="${ctxPath}/resource/images/nav_Fi1.png" /></div>
+        <div class="nav_right"><a href="#"><img src="${ctxPath}/resource/images/nav_Fi2.png" /></a></div>
+       </div>
+       <div class="Fifthconnot">
+         <div class="Fifther">
+           <div class="Fit_title"><img src="${ctxPath}/resource/images/m_03.jpg" /></div>
+           <div class="Fif_pic"><a href="${ctxPath}/play/eat" target="_blank"><img src="${ctxPath}/resource/images/n_85.jpg" /></a></div>
+           <ul>
+           
+
+           <!--# if(eatPage.list.~size>0) { -->
+           		<!--# var zz=1; for(eat in eatPage.list![]) { -->
+           			<!--# if(zz<=5) { -->
+        				<li><a href="${ctxPath}/play/info/${eat.id}"  target="_blank">·${eat.name}</a></li>
+        			<!--# } -->
+        		<!--# zz=zz+1; } -->
+           <!--# } -->
+           </ul> 
+         </div>
+         <div class="Fifther">
+           <div class="Fit_title"><img src="${ctxPath}/resource/images/m_05.jpg" /></div>
+           <div class="Fif_pic"><a href="${ctxPath}/play/go" target="_blank"><img src="${ctxPath}/resource/images/n_87.jpg" /></a></div>
+           <ul>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>           
+           </ul> 
+         </div>
+         <div class="Fifther">
+           <div class="Fit_title"><img src="${ctxPath}/resource/images/m_07.jpg" /></div>
+           <div class="Fif_pic"><a href="${ctxPath}/play/buy" target="_blank"><img src="${ctxPath}/resource/images/n_90.jpg" /></a></div>
+           <ul>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>           
+           </ul> 
+         </div>
+         <div class="Fifther">
+           <div class="Fit_title"><img src="${ctxPath}/resource/images/m_09.jpg" /></div>
+           <div class="Fif_pic"><a href="${ctxPath}/play/like" target="_blank"><img src="${ctxPath}/resource/images/n_92.jpg" /></a></div>
+           <ul>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>
+            <li><a href="#">·云南汽锅鸡、小锅米线、臭豆腐...</a></li>           
+           </ul> 
+         </div>
+       </div>           
+    </div>
+   </div>
+  </div>
+
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/month.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        $("#siderCat").show();
+        $(".focus").slide({titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, delayTime: 1000});
+        var privilegeListItem = $("div.privilegeList").find("a"),
+                privilegeListItemMid = $("div.privilegeList").find("a:eq(1),a:eq(4),a:eq(7)");
+        $(privilegeListItemMid).addClass("mid");
+        $(privilegeListItem).hover(function () {
+            $(this).addClass("hover");
+        }, function () {
+            $(this).removeClass("hover");
+        });
+        var hotLineWrapItem = $(".hotLineWrap").find(".hotLineWrapItem");
+        $(hotLineWrapItem).each(function (i) {
+            if ((i + 1) % 4 == 0) {
+                $(this).addClass("hotLineWrapItemNoMg");
+            }
+        }).hover(function () {
+                    $(this).addClass("hotLineWrapItemHov");
+                }, function () {
+                    $(this).removeClass("hotLineWrapItemHov");
+                });
+        $(".hotelListPic").find("li").each(function (i) {
+            $(this).addClass("item" + (i + 1));
+        });
+        $(".carListPic").find("li").each(function (i) {
+            $(this).addClass("item" + (i + 1));
+        });
+        $(".hotelListTxt").children().each(function () {
+            $(this).hover(function () {
+                $(this).addClass("hotelListTxtItemHov").siblings().removeClass("hotelListTxtItemHov").find('img').trigger('resize');
+
+            });
+        }).first().addClass("hotelListTxtItemHov");
+        $(".carListLogo").slide({titCell: ".carListLogoCloudPages ul", mainCell: ".carListLogoCloud", effect: "leftLoop", autoPage: true});
+
+        $(".ticketListItem").find("li>span>img").each(function () {
+            $(this).hover(function () {
+                $(this).parent().siblings("div").show();
+                $(this).parent().parents(".ticketListChildItem").siblings().find(".ticketListChildItemDetail").hide();
+                $(this).parent().parents(".ticketListItem").siblings().find(".ticketListChildItemDetail").hide();
+            });
+            $(this).parent().siblings("div").hover(function () {
+            },function () {
+                $(this).hide();
+            }).click(function () {
+                        location.href = $(this).find('h2>a').attr('href');
+                    });
+        });
+        $(".ticketWrap").slide({titCell: ".ticketListItemPages ul", mainCell: ".ticketListItemAllWrap", effect: "leftLoop", autoPage: true});
+        $('.ticketListItemPages').width($('.ticketListItemPages ul li').length * 13 + 11);
+        $('.carListLogoCloudPages').width($('.carListLogoCloudPages ul li').length * 13 + 11);
+    });
+</script>

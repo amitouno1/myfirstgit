@@ -1,0 +1,35 @@
+ <div class="row">
+    
+    	<div class="col-xs-2" >
+	       
+	    </div>
+    
+        <div class="col-xs-6" >
+	        <div class="input-group input-group-sm">
+	          <input type="text" class="form-control" id="username_search"/>
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" onclick="search();"><a class="glyphicon glyphicon-search"></a></button>
+		      </span>
+	        </div>
+	    </div>
+          
+       <div class="col-xs-4" >
+        <ul class="pagination pagination-sm pull-right" style="margin-left: 10px;">
+            <!--# if(pjList.pageNumber!1 > 1) {-->
+            <li class="previous"><a
+                    href="${ctxPath}/manage/goods?op=pj&id=${goods.id}&pageNumber=${pjList.pageNumber - 1}">上一页</a>
+            </li>
+            <!--# } else { -->
+            <li class="previous disabled"><span>上一页</span></li>
+            <!--# } -->
+            <!--# if(pjList.pageNumber < pjList.totalPage) { -->
+            <li class="next"><a
+                    href="${ctxPath}/manage/goods?op=pj&id=${goods.id}&pageNumber=${pjList.pageNumber + 1}">下一页</a>
+            </li>
+            <!--# } else { -->
+            <li class="next disabled"><span>下一页</span></li>
+            <!--# } -->
+        </ul>
+
+      </div>
+     </div>

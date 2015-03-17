@@ -1,0 +1,182 @@
+<!--# layout("/view/include/layout.html") { -->
+<div id="main" class="clearfix">
+    <div class="blank"></div>
+    <div class="reviews" style="margin-top:30px">
+	  <div class="usertitle">
+	    <dl><dd><span class="yhhs">订单编号：</span>${order.id}</dd><dd><span class="yhhs">商品名称：</span>${order.goodsObject.name}</dd><dt><span class="yhhs">支付金额：</span>${order.payPrice/100}</dt></dl>
+	  </div>
+	  <div class="userMid">
+	
+	    <div class="user_left">
+		   	  <div style=" font-size:17px;font-family: Microsoft YaHei;margin-top:17px;margin-left:15px; color:#da5b7e;">请选择您的评价星级</div>
+
+			  <div id="fwzl" style="margin-top:17px;margin-left:15px; border-bottom:solid 0px black;"><span style=" font-size:12px;font-family: Microsoft YaHei">服务质量:&nbsp;&nbsp;&nbsp;</span></div>
+			  <div id="fwzl_" style="display:none;" ></div>
+
+			  <div id="xcap" style="margin-top:17px;margin-left:15px; border-bottom:solid 0px black;"><span style=" font-size:12px;font-family: Microsoft YaHei">行程安排:&nbsp;&nbsp;&nbsp;</span></div>
+			  <div id="xcap_" style="display:none;"></div>
+			  
+			  <div id="sspz" style="margin-top:17px;margin-left:15px; border-bottom:solid 0px black;"><span style=" font-size:12px;font-family: Microsoft YaHei">食宿品质:&nbsp;&nbsp;&nbsp;</span></div>
+			  <div id="sspz_" style="display:none;"></div>
+			  
+	    </div>
+	    <div class="user_right"><p>评价留言</p>
+	      <textarea name="" class="user_Message"></textarea>
+	    </div>
+	  </div>
+	  <div class="userdowm">（温馨提示：用户可以对本次行程做出评论或在本次服务中有任何建议都可以留下20-50字留言）<input name="btnSubmit" id="btnSubmit" type="button" value="提交" class="userbutton" /></div>
+	</div>
+    <div class="blank"></div>
+    
+    <input type="hidden" id="fwzl_hidden" value="0"/>
+    <input type="hidden" id="xcap_hidden" value="0"/>
+    <input type="hidden" id="sspz_hidden" value="0"/>
+    
+</div>
+<!--# } -->
+<!--js pages load-->
+<!-- <script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script> -->
+
+
+<link type="text/css" rel="stylesheet" href="${ctxPath}/resource/js/pj/demo/css/application.css">
+<script type="text/javascript" src="${ctxPath}/resource/js/pj/demo/js/jquery.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/resource/js/pj/lib/jquery.raty.min.js"></script>
+
+<!--js pages part-->
+<script>
+    $(function () {
+      
+        $('#btnSubmit').click(function () {
+        	var message = $('.user_Message').val();
+        	var orderid="${order.id}";
+        	var goodsid="${goods.id}";
+        	
+        	var fwzl=document.getElementById("fwzl_hidden").value;
+        	var xcap=document.getElementById("xcap_hidden").value;
+        	var sspz=document.getElementById("sspz_hidden").value;
+        	
+        	if(parseInt(fwzl)>5||parseInt(fwzl)<=0)
+			{
+				alert("请您对服务质量进行评价");
+				return;
+			}
+			
+			if(parseInt(xcap)>5||parseInt(xcap)<=0)
+			{
+				alert("请您对行程安排进行评价");
+				return;
+			}
+			
+			if(parseInt(sspz)>5||parseInt(sspz)<=0)
+			{
+				alert("请您对食宿品质进行评价");
+				return;
+			}
+			
+			
+			if(message.length>50)
+			{
+				alert("留言字数过多，请您精简您的留言信息");
+				return;
+			}
+        	
+        	var ztpj=parseInt(fwzl)+parseInt(xcap)+parseInt(sspz);
+        	
+        	$.post('${ctxPath}/rest/pj/save', {
+                orderid: orderid,
+                message: message,
+                goodsid:goodsid,
+                fwzl:fwzl+"",
+                xcap:xcap+"",
+                sspz:sspz+"",
+                ztpj:ztpj+""
+                
+            }, function () {
+            	alert("此次评价成功!忠心的感谢您对此产品做出评价!");
+                location.href="/user/order";
+            });
+       	
+        });
+
+
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+    
+      $.fn.raty.defaults.path = '${ctxPath}/resource/js/pj/lib/img';
+      
+      $('#fwzl').raty({
+	  	number: 5,//多少个星星设置		
+		targetType: 'hint',//类型选择，number是数字值，hint，是设置的数组值
+        path      : '${ctxPath}/resource/js/pj/demo/img',
+		hints     : ['非常不满意','不满意','一般','满意','非常满意'],
+        cancelOff : 'cancel-off-big.png',
+        cancelOn  : 'cancel-on-big.png',
+        size      : 36,
+        starHalf  : 'star-half-big.png',
+        starOff   : 'star-off-big.png',
+        starOn    : 'star-on-big.png',
+        target    : '#fwzl_',
+        cancel    : false,
+        targetKeep: true,
+		targetText: '请选择评分',
+
+        click: function(score, evt) {
+          //alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+          document.getElementById("fwzl_hidden").value=score;
+        }
+      });
+      
+      $('#xcap').raty({
+	  	number: 5,//多少个星星设置		
+		targetType: 'hint',//类型选择，number是数字值，hint，是设置的数组值
+        path      : '${ctxPath}/resource/js/pj/demo/img',
+		hints     : ['非常不满意','不满意','一般','满意','非常满意'],
+        cancelOff : 'cancel-off-big.png',
+        cancelOn  : 'cancel-on-big.png',
+        size      : 36,
+        starHalf  : 'star-half-big.png',
+        starOff   : 'star-off-big.png',
+        starOn    : 'star-on-big.png',
+        target    : '#xcap_',
+        cancel    : false,
+        targetKeep: true,
+		targetText: '请选择评分',
+
+        click: function(score, evt) {
+          //alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+          document.getElementById("xcap_hidden").value=score;
+        }
+      });
+      
+      $('#sspz').raty({
+	  	number: 5,//多少个星星设置		
+		targetType: 'hint',//类型选择，number是数字值，hint，是设置的数组值
+        path      : '${ctxPath}/resource/js/pj/demo/img',
+		hints     : ['非常不满意','不满意','一般','满意','非常满意'],
+        cancelOff : 'cancel-off-big.png',
+        cancelOn  : 'cancel-on-big.png',
+        size      : 36,
+        starHalf  : 'star-half-big.png',
+        starOff   : 'star-off-big.png',
+        starOn    : 'star-on-big.png',
+        target    : '#sspz_',
+        cancel    : false,
+        targetKeep: true,
+		targetText: '请选择评分',
+
+        click: function(score, evt) {
+          //alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+          document.getElementById("sspz_hidden").value=score;
+        }
+      });
+      
+          
+    });
+</script>
+
+</body>
+</html>

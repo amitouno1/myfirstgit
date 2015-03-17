@@ -1,0 +1,28 @@
+<div class="panel panel-default list">
+    <div class="panel-heading clearfix">
+        <!--# include("/manage/system/setting/list.action.html") {} -->
+    </div>
+    <div class="panel-body">
+        <!--# for(setting in settingPage.list![]) { -->
+        <div class="item clearfix" data-id="${setting.id}">
+            <ul class="list-inline pull-left" style="line-height: 30px">
+                <li>${setting.name}</li>
+                <li class="value">${setting.value}</li>
+                <li class="input" style="display: none"><input type="text" class="form-control"
+                                                               value="${setting.value}"></li>
+            </ul>
+            <ul class="list-inline pull-right">
+                <li>
+                    <button type="button" class="btn btn-default btn-sm">编辑</button>
+                    <button type="button" class="btn btn-success btn-sm" style="display: none">保存</button>
+                </li>
+            </ul>
+        </div>
+        <!--# } elsefor { -->
+        <div class="empty"></div>
+        <!--# } -->
+    </div>
+    <div class="panel-footer clearfix">
+        <!--# include("/manage/system/setting/list.action.html") {} -->
+    </div>
+</div>

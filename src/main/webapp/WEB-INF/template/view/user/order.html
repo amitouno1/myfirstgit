@@ -1,0 +1,168 @@
+<!--# layout("/view/include/layout.html") { -->
+<div id="main" class="clearfix">
+    <div class="blank"></div>
+    <!--# include("/view/include/left.html"){}-->
+    <div class="userCenterMain fr">
+        <div class="userOrderListAll">
+            <div class="userCenterWhere clearfix">
+                <!--# if(status!'all' == 'remove') { -->
+                <a href="${ctxPath}/user/order?status=all" class="orderRecycle">我的订单</a>
+                <!--# } else { -->
+                <a href="${ctxPath}/user/order?status=remove" class="orderRecycle">订单回收站</a>
+                <!--# } -->
+                <span class="bold">交易管理</span> &gt; <!--# if(status!'all' == 'remove') { -->订单回收站<!--# } else { -->我的订单<!--# } -->
+            </div>
+            <!--# if(status!'remove' != 'remove') { -->
+            <div class="userOrderListTitle clearfix">
+                <ul class="clearfix">
+                    <!--# if(status!'all' == 'all') { -->
+                    <li class="hasArrow">全部订单</li>
+                    <!--# } else { -->
+                    <li class="un-select"><a href="${ctxPath}/user/order?status=all">全部订单</a></li>
+                    <!--# } -->
+                    <!--# if(status!'all' == 'pay') { -->
+                    <li class="hasArrow">已付款</li>
+                    <!--# } else { -->
+                    <li class="un-select"><a href="${ctxPath}/user/order?status=pay">已付款</a></li>
+                    <!--# } -->
+                    <!--# if(status!'all' == 'unpay') { -->
+                    <li class="hasArrow">未付款</li>
+                    <!--# } else { -->
+                    <li class="un-select"><a href="${ctxPath}/user/order?status=unpay">未付款</a></li>
+                    <!--# } -->
+                </ul>
+                <ol>
+                    <form action="${ctxPath}/user/order">
+                        <input name="orderKey" type="text" class="searchOrder" value="商品名称">
+                        <input type="submit" value="查询" class="searchOrderBtn">
+                    </form>
+                </ol>
+            </div>
+            <!--# } -->
+            <div class="userOrderListGrid">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th width="13%">订单编号</th>
+                        <th width="35%">订单商品</th>
+                        <th width="13%">支付金额</th>
+                        <th width="13%">下单时间</th>
+                        <th width="13%">订单状态</th>
+                        <th width="13%">操作</th>
+                    </tr>
+                    <!--# for(order in orderPage.list) { -->
+                    <tr>
+                        <td>${order.no}</td>
+                        <td class="title"><img width="90" height="90" src="${ctxPath}/rest/image/${order.goodsObject.master!}"/><a href="${ctxPath}/detail/${order.goodsObject.id}">${order.goodsObject.name}</a></td>
+                        <td><span class="fntRedBold">￥${(order.payPrice!0 - order.discount!0) / 100}</span><br>
+                            <!--# if(order.payMethod == 1) { print("全款支付"); } -->
+                            <!--# if(order.payMethod == 2) { print("定金预定"); } -->
+                            <!--# if(order.payMethod == 4) { print("普通预定"); } -->
+                        </td>
+                        <td>${order.createTime, dateFormat='yyyy-MM-dd HH:mm:ss'}</td>
+                        <!--# if (order.status == -1) { -->
+                        <td>已取消</td>
+                        <td><a href=" ${ctxPath}/order/info/${order.id}" target="_blank">查看</a></td>
+                        <!--# }
+                        if (order.status == 1) { -->
+                        <td class="holdon">等待付款</td>
+                        <td>
+                            <a href="${ctxPath}/pay/${order.id}" class="btnPay" target="_blank">付款</a>
+                            <a href="${ctxPath}/order/info/${order.id}" target="_blank">查看</a><br>
+                            <a href="${ctxPath}/order/close/${order.id}">取消订单</a>
+                        </td>
+                        <!--# }
+                        if (order.status == 2) { -->
+                        <td>已完成</td>
+                        <td>
+                            <a href="${ctxPath}/order/pj/${order.id}" target="_blank">评价</a>
+                            <span class="fntBlue">|</span>
+                            <a href="${ctxPath}/order/info/${order.id}" target="_blank">查看</a>
+                            <span class="fntBlue">|</span>
+                            <a href="${ctxPath}/order/remove/${order.id}">删除</a>
+                            <a href="${ctxPath}/detail/${order.goodsObject.id}" class="btnReBuy" target="_blank">还要买</a>
+                        </td>
+                        <!--# } -->
+                    </tr>
+                    <!--# } -->
+                </table>
+            </div>
+
+            <div class="pagesBottom pagesPadding20 clearmod">
+                <!--# if(orderPage.pageNumber == 1) { -->
+                <a class="disable">&lt;</a>
+                <!--# } else { -->
+                <a class="prev" href="${ctxPath}/user/order?status=${status}&pageNumber=${orderPage.pageNumber - 1}">上一页</a>
+                <!--# } -->
+                <!--# var index = 1; -->
+                <!--# while(index <= orderPage.totalPage) { -->
+                <!--# if(orderPage.pageNumber == index) { -->
+                <a class="current" href="javascript:void(0)">${index}</a>
+                <!--# } else { -->
+                <a class="pNum" href="${ctxPath}/user/order?status=${status!}&pageNumber=${index}">${index}</a>
+                <!--# } -->
+                <!--# index = index + 1; -->
+                <!--# } -->
+                <!--# if((orderPage.pageNumber == orderPage.totalPage) || orderPage.totalPage == 0) { -->
+                <a class="disable">&gt;</a>
+                <!--# } else { -->
+                <a class="next" href="${ctxPath}/user/order?status=${status!}&pageNumber=${orderPage.pageNumber + 1}">下一页</a>
+                <!--# } -->
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <!--# include("/view/user/bottom.html"){}-->
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+<!--js pages part-->
+<script>
+    $(function () {
+        var userCenterSiderNavLinks = $("div.userCenterSider").find("a");
+        $(userCenterSiderNavLinks).each(function (i) {
+            var links = $(userCenterSiderNavLinks).eq(i).attr("href"), myURL = document.URL;
+            if (myURL.indexOf(links) != -1) {
+                $(userCenterSiderNavLinks).eq(i).parent().addClass("current");
+            }
+        });
+        $(".uLikeWhat").slide({titCell: ".uLikeWhatTitle ul", mainCell: ".uLikeWhatScreen", effect: "leftLoop", autoPage: true, autoPlay: true});
+        var searchOrder = $("input.searchOrder");
+        $(searchOrder).focus(function () {
+            if ($(this).val() == this.defaultValue) {
+                $(this).val("").css("color", "#000")
+            }
+        }).blur(function () {
+            if ($(this).val() == '') {
+                $(this).val(this.defaultValue).css("color", "#000")
+            }
+        });
+        $.cookie.json = true;
+        $.post('${ctxPath}/rest/goods/cookie', {
+            list: ($.cookie('goodsViewList') || []).reverse().join(',')
+        }, function (res) {
+            $.each(res.list, function () {
+                $('.cookielist').append(
+                                '<li>'
+                                + '<a href="#">'
+                                + '<img class="proPic" src="${ctxPath}/rest/image/' + this.id + '"/>'
+                                + '</a>'
+                                + '<h3 style="height: 36px; overflow: hidden;">'
+                                + '<a href="#" target="_blank">' + this.name + '</a>'
+                                + '</h3>'
+                                + '<span>￥' + ((this.minPrice || 0) / 100) + '</span>'
+                                + '</li>');
+            });
+
+        });
+
+        $('.clearCookie').click(function () {
+            $.removeCookie('goodsViewList', {path: '/'});
+            $('.cookielist').empty();
+        });
+    });
+</script>
+</body>
+</html>

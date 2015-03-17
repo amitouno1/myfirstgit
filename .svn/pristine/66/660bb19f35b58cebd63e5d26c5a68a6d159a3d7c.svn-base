@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>【假日风光】云南旅游，丽江旅游，云南自助游，旅游资讯，云南地图，云南旅游景点，云南旅游攻略-假日风光</title>
+    <meta name="keywords" content="云南旅游  丽江旅游  云南自助游  云南旅游地图  云南旅游景点"/>
+    <meta name="description"
+          content="假日风光（www.jiarifengguang.com）提供云南旅游，丽江旅游，云南自助游，旅游资讯，云南地图，云南旅游景点等信息，比云南旅游攻略更全的云南旅游必看资讯。假日风光，云南旅游资讯第一平台。"/>
+    <link href="${ctxPath}/resource/css/main.css" rel="stylesheet" type="text/css">
+    <!--# if (cur!'' == 'custom') { -->
+    <link href="${ctxPath}/resource/css/custom.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'custom.other') { -->
+    <link href="${ctxPath}/resource/css/meetingGroup.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'play') { -->
+    <link href="${ctxPath}/resource/css/rimPart.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'cart') { -->
+    <link href="${ctxPath}/resource/css/cart.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <!--# if (cur!'' == 'food') { -->
+    <link href="${ctxPath}/resource/css/style.css" rel="stylesheet" type="text/css">
+    <!--# } -->
+    <link href="${ctxPath}/resource/css/ui/juimin.css" rel="stylesheet" type="text/css">
+    <link href="${ctxPath}/resource/css/square/orange.css" rel="stylesheet" type="text/css">
+    <!--# if (cur!'' == 'detail-line') { -->
+    <link href="${ctxPath}/resource/css/css.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctxPath}/resource/css/qh.css" type="text/css" rel="stylesheet"/>
+    <!--# } -->
+    
+    <link href="${ctxPath}/resource/css/Public.css" type="text/css" rel="stylesheet"/>
+    
+    
+</head>
+
+<!--# if(cur!'' == 'home') { -->
+<body onLoad="monthCurrent();">
+<!-- # } else { -->
+<body>
+<!--# } -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-11803261-8', 'jiarifengguang.com');
+    ga('send', 'pageview');
+
+</script>
+
+<div id="revision_head">
+    <div class="revision_toper">
+    <div class="revision_top_left"><img src="${ctxPath}/resource/images/tellpe.png" width="271" height="30" />  
+    </div>
+    <div class="revision_top_right">
+      <ul>
+          <li><a href="#">[ 登 录 ]</a></li>
+          <li><a href="#">[ 注 册 ]</a></li>
+          <li><img src="${ctxPath}/resource/images/shopbuy.png" width="30" height="30" />购物车 <span>0</span></li>
+      </ul>
+    </div>
+    </div>
+    <div class="revision_toper">
+      <div class="revision_toperLeft">
+        <div class="logo"><img src="${ctxPath}/resource/images/logo.jpg" /></div>
+        <div class="Search"><input name="" type="text" class="textbox1" /><input name="" type="button" class="butbox1" /><p>热门： 丽江  香格里拉  西双版纳  大理  昆明</p></div>
+      </div>
+      <div class="revision_toperRight"><img src="${ctxPath}/resource/images/topright.jpg" /></div>
+    </div>
+    <div class="revision_nav">
+      <div class="revision_navleft">
+        <ul>
+          <li><img src="${ctxPath}/resource/images/all.png" /></li>
+          <li class="nav_bj"><img src="${ctxPath}/resource/images/nav_1.png" /></li>
+          <li><a href="#"><img src="${ctxPath}/resource/images/nav_2.png" /></a></li>
+          <li><a href="#"><img src="${ctxPath}/resource/images/nav_3.png" /></a></li>
+          <li><a href="#"><img src="${ctxPath}/resource/images/nav_4.png" /></a></li>
+          <li><a href="#"><img src="${ctxPath}/resource/images/nav_5.png" /></a></li>
+          <li><a href="#"><img src="${ctxPath}/resource/images/nav_6.png" /></a></li>
+        </ul>
+      </div>
+      <div class="revision_navright">
+        <ul>
+          <li><img src="${ctxPath}/resource/images/tellright.png" />关注我们：</li>
+          <li><img src="${ctxPath}/resource/images/weixin.png" />加微信</li>
+          <li><img src="${ctxPath}/resource/images/sinaright.png" />加微博</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+

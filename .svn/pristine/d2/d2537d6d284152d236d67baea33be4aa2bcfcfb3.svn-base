@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全景丽江旅行</title>
+<link href="${ctxPath}/resource/jpjd/css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+
+
+
+<body>
+<script type="text/javascript" src="${ctxPath}/resource/jpjd/js/jquery.js"></script>
+<script type='text/javascript'>
+$(function(){
+	for(i=1;i<=80;i++){
+		if(i==78)
+		{
+			$(".bg").append('<a href="http://www.jiarifengguang.com/" target="_blank"><p style=background-image:url(${ctxPath}/resource/jpjd/images/n_'+i+'.jpg)>&nbsp;</p></a>');
+		}else
+		{
+			$(".bg").append('<p style=background-image:url(${ctxPath}/resource/jpjd/images/n_'+i+'.jpg)></p>');
+		}
+		
+	}
+})
+</script>
+</body>
+<div class="bg">
+</div>
+<div class="mian">
+ <div class="fh"><a href="http://www.jiarifengguang.com/">返回首页</a></div>
+ <div class="nav">
+   <ul>
+     <li><a href="#ljzt1"><img src="${ctxPath}/resource/jpjd/images/lvyou.png" /></a></li>
+     <li><a href="#ljzt2"><img src="${ctxPath}/resource/jpjd/images/he.png" /></a></li>
+     <li><a href="#ljzt3"><img src="${ctxPath}/resource/jpjd/images/eat.png" /></a></li>
+     <li><a href="#ljzt4"><img src="${ctxPath}/resource/jpjd/images/jiudian.png" /></a></li>
+     <li><a href="#ljzt5"><img src="${ctxPath}/resource/jpjd/images/shopping.png" /></a></li>
+   </ul>
+ </div>
+ <div id="ljzt1">
+  <div class="ljzt1_L1"><a href="http://www.jiarifengguang.com/detail/539942812223e70669c0280c"></a></div>
+  <div class="ljzt1_L2"><a href="http://www.jiarifengguang.com/detail/539953132223e70669c02833"></a></div>
+  <div class="ljzt1_L3"><a href="http://www.jiarifengguang.com/detail/539962af2223e70669c0285d"></a></div>
+ </div>
+ <div id="ljzt2">
+  <div class="ljzt2_L1"><a href="#"></a></div>
+  <div class="ljzt2_L2"><a href="#"></a></div>
+ </div>
+ <div id="ljzt3">
+  <div class="ljzt3_left"><a href="#"></a></div>
+  <div class="ljzt3_right"><div class="ljzt3_l1"><a href="http://www.jiarifengguang.com/play/info/53589c2327482f5e74a65cb5"></a></div><div class="ljzt3_l2"><a href="#"></a></div></div>
+ </div>
+ <div id="ljzt4">
+  <div class="ljzt4_left">
+    <div class="ljzt4_L1"><a href="#"></a></div>
+    <div class="ljzt4_L2"><a href="http://www.jiarifengguang.com/detail/530eda7f274812f5a947b646"></a></div>
+  </div>
+  <div class="ljzt4_L3"><a href="#"></a></div>
+ </div>
+ <div id="ljzt5">
+  <div class="ljzt5_left"><a href="#"></a></div>
+  <div class="ljzt5_right"><div class="ljzt3_l1"><a href="#"></a></div><div class="ljzt3_l2"><a href="#"></a></div></div>
+ </div>
+ 
+ <div id="ljzt6">
+ <script type=text/javascript src="${ctxPath}/resource/jpjd/js/ljztqh.js"> </script>
+     <div class=blk_29>
+<div class=LeftBotton id=LeftArr></div>
+<div class=Cont id=ISL_Cont_1><!-- 图片列表 begin -->
+<div class=box><A class=imgBorder href="http://www.jiarifengguang.com/detail/539830642223e70669c0278a" target=_blank><img src="${ctxPath}/resource/jpjd/images/open1.jpg" /></A> 
+<P><A href="http://www.jiarifengguang.com/detail/539830642223e70669c0278a" 
+target=_blank>昆明大理丽江6日游</A></P></div>
+<div class=box><A class=imgBorder href="http://www.jiarifengguang.com/detail/539950822223e70669c02828" target=_blank><img src="${ctxPath}/resource/jpjd/images/open2.jpg" /></A> 
+<P><A href="http://www.jiarifengguang.com/detail/539950822223e70669c02828" 
+target=_blank>昆明大理丽江香格里拉8日游</A></P></div>
+<div class=box><A class=imgBorder href="http://www.jiarifengguang.com/detail/539942812223e70669c0280c" target=_blank><img src="${ctxPath}/resource/jpjd/images/open3.jpg" /></A> 
+<P><A href="http://www.jiarifengguang.com/detail/539942812223e70669c0280c" 
+target=_blank>玉龙雪山纯玩一日游</A></P></div>
+<div class=box><A class=imgBorder href="http://www.jiarifengguang.com/detail/539953132223e70669c02833" target=_blank><img src="${ctxPath}/resource/jpjd/images/open4.jpg" /></A> 
+<P><A href="http://www.jiarifengguang.com/detail/539953132223e70669c02833" 
+target=_blank>泸沽湖两日游</A></P></div>
+<div class=box><A class=imgBorder href="http://www.jiarifengguang.com/detail/539962af2223e70669c0285d" target=_blank><img src="${ctxPath}/resource/jpjd/images/open5.jpg" /></A> 
+<P><A href="http://www.jiarifengguang.com/detail/539962af2223e70669c0285d" 
+target=_blank>拉市海一日游</A></P></div>
+
+
+<!-- 图片列表 end --></div>
+<div class=RightBotton id=RightArr></div></div>
+<SCRIPT language=javascript type=text/javascript>
+  <!--//--><![CDATA[//><!--
+  var scrollPic_02 = new ScrollPic();
+  scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+  scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+  scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+  scrollPic_02.frameWidth     = 910;//显示框宽度
+  scrollPic_02.pageWidth      = 220; //翻页宽度
+  scrollPic_02.speed          = 10; //移动速度(单位毫秒，越小越快)
+  scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+  scrollPic_02.autoPlay       = false; //自动播放
+  scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+  scrollPic_02.initialize(); //初始化
+  //--><!]]>
+</SCRIPT>
+ </div>
+</div>
+</html>

@@ -1,0 +1,405 @@
+<!--# layout("/view/include/layout.html", {cur: 'detail-hotel'}) { -->
+	<div id="productmain">
+   <div class="producttitle"><a href="/">首页</a> > <a href="${ctxPath}/line">跟团游</a> > ${goods.name!}</div>
+   <div class="productshow">
+     <div class="showleft">
+     
+      <div class="goodsThumb">
+            <div class="bd">
+                <div class="tempWrap" style="overflow:hidden; position:relative; width:400px">
+                    <ul style="width: 2532px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -400px; ">
+                        <!--# for(img in goods.pics![]) { -->
+                        <li class="clone" style="float:left; width:400px; ">
+                            
+                        	<img src="${ctxPath}/rest/image/${img.id!}">
+                           
+                        </li>
+                        <!--# } -->
+                    </ul>
+                </div>
+            </div>
+            <div class="hd">
+                <ul>
+                    <!--# for(img in goods.pics![]) { -->
+                    <!--# if(img_index == 0) { -->
+                    <li class="on"><img src="${ctxPath}/rest/image/${img.id!}"></li>
+                    <!--# } else { -->
+                    <li><img src="${ctxPath}/rest/image/${img.id!}"></li>
+                    <!--# } -->
+                    <!--# } -->
+
+                </ul>
+                <ol>
+                    <a class="more" href="#" target="_blank">查看全部</a>
+                </ol>
+            </div>
+        </div>
+	</div>
+
+	<script src="css/sy.js"></script>
+	<script src="css/slide.js"></script>
+	
+	<script>
+            $(function () {
+                $(".goodsThumb").slide({mainCell: ".bd ul", effect: "leftLoop", delayTime: 500});
+                var dateInput = $("#dateBegin,#dateEnd");
+                $(dateInput).focus(function () {
+                    if ($(this).val() == this.defaultValue) {
+                        $(this).val("").css("color", "#999")
+                    }
+                }).blur(function () {
+                    if ($(this).val() == '') {
+                        $(this).val(this.defaultValue).css("color", "#999")
+                    }
+                });
+
+            });
+        </script>
+  	
+     <div class="showright">
+       <div class="yh20"><a href="#">${goods.name!}</a>
+         <p><a href="#">${goods.caption!}</a></p>
+       </div>
+       
+       <div class="monney">
+         <!--# if(goods.SCPrice == '') { -->
+            <div class="jg"><span class="yh10">￥</span><span class="yh30" id="lable_price">${goods.minPrice!0 / 100} </span></div>
+            <!--# } else { -->
+            <div class="jg">
+            	<span id="pricetype">促销价</span><span class="yh10">￥</span><span class="yh30" id="lable_price">${goods.minPrice!0 / 100} </span>暑假特惠
+                <p>市场价：￥${goods.SCPrice!'0'}元</p></div>
+            <!--# } -->
+            <div class="sm"><br/>
+                <a href="#">起价说明</a>
+                <div class="smer">·本起价是从所有可选出发日期中，选出的最低单人价，实际产品价格会根据您所<span class="red">选择的出发日期、出行人数、服务标准、入住酒店房型、航班或交通以及所选附加服务</span>的不同而有所差别；<br />·最后价格以您提交订单、旅游顾问确认后为准。</div>
+            </div>
+       </div>
+       
+       <ul class="xq">
+          <li><img src="${ctxPath}/resource/image/t1.png" width="25" height="25"/>销量：${goods.sales!0}</li>
+          <li><img src="${ctxPath}/resource/image/t2.png" width="25" height="25"/>评价：${commentPage.totalRow!0}</li>
+          <li><img src="${ctxPath}/resource/image/t3.png" width="25" height="25"/>收藏：${goods.collect!0}</li>      
+       </ul>
+       <ul class="xc">
+         <li>入住时间：&nbsp;&nbsp;<span class="selBG">
+		        <!--# for(date in dateBegin) { -->
+		      		<input type="text" id="dateBegin" class="text2" value="${date}">
+		      	<!--# } -->
+            </span></li>
+         	<li>退房时间：&nbsp;&nbsp;<span class="selBG">
+		        <!--# for(date in dateEnd) { -->
+		      		<input type="text" id="dateEnd" class="text2" value="${date}">
+		      	<!--# } -->
+            </span></li>     
+       </ul>
+       
+       <ul class="xc">
+	         <li>
+	         	预定房型：<span class="selBG1">
+	         	<select name="" class="text3" onChange="changeTotalPrice();" id="selectType">
+	         		<!--# for(priceGroup in goods.priceGroupObject) { -->
+		           		<!--# for(sub in priceGroup.names) { -->
+	                    	<option id="${sub}" value="" class="selectType">${sub}</option>
+	                    <!--# } -->
+                    <!--# } -->
+	         	</select>
+	         	</span>
+	         </li>
+	         <script type="text/plain" id="priceSet">${goods.priceSet}</script>
+	         
+	         <li><samp><em class="minus"><img src="${ctxPath}/resource/image/down.jpg" width="16" height="13" /></em><em class="plus" style="padding:0px"><img src="${ctxPath}/resource/image/sown.jpg" width="16" height="13" /></em></samp>
+	         	数量：<input  id="counts"  name="" type="text"  class="text1" value="1" maxlength="8"/>
+	         </li>
+	         
+       </ul>
+       
+       <!-- 
+         <!--# for(priceSet in goods.priceSetObjectList) { -->
+           <h6>预定房型：</h6>
+           <ul class="multi clearfix pg">
+               <!--# for(item in priceSet) { -->
+               		${item}
+               <!--# } -->
+           </ul>
+         <!--# } -->
+		 -->
+		 
+       <div><input name="" class="but1" type="button" value="立即购买" /><input name="" class="but2" type="button" value="加入购物车" /></div>
+       <div class="zf"><strong>支付方式：</strong><img src="${ctxPath}/resource/image/zfb.jpg" width="14" height="14" />支付宝&nbsp;&nbsp;&nbsp;&nbsp;<strong>服务承诺：</strong>100%发团  100%如实描述</div>
+       <div class="zf">本产品由假日风光旅行社有限公司为您服务 &nbsp;&nbsp;&nbsp;&nbsp;<strong>服务电话：400-848-8099</strong></div>
+     </div>
+   </div>
+   
+   <div class="details">
+      <div class="detailsleft">
+        <div class="detailsfrist">
+          <div class="detailstitle">
+          	云南旅游
+          </div>
+          <ul>
+           <li><img src="${ctxPath}/resource/image/qc.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/jg.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/zf.jpg" width="180" height="55" /></li>
+           <li><img src="${ctxPath}/resource/image/gj.jpg" width="180" height="55" /></li>
+          </ul>
+        </div>
+        
+        <div class="detailssecond">
+            <div class="detailstitle">
+             	热门线路
+            </div>
+            <ul>
+                <!--# for(hotGoods in hotGoodsPage.list![]) { -->
+                                
+                <li>
+                	<a href="#"  onclick="javascript:window.open('/detail/${hotGoods.id}')"><img src="${ctxPath}/rest/image/${hotGoods.master!}" width="180" height="120"/>${hotGoods.name!''}</a>
+                    <div class="xhjg">￥${hotGoods.maxPrice!0 / 100}起</div>
+                </li>
+                
+                <!--# } -->
+            </ul>
+        </div>
+        
+      </div>
+      <div class="detailsright">
+        <div class="tablist">
+         
+            <div class="tablist">
+            <ul>
+                <li class="tab6"><a href="#_jtwz">交通位置</a>
+                </li>
+                <li class="tab7"><a href="#_fx">房型</a>
+                </li>
+                <li class="tab8"><a href="#_wxts">温馨提示</a>
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+        
+        <div class="detailser">
+	        
+			<div class="proDetailInfoMain">
+				<div class="note" style="padding: 10px"  id="note">${goods.note}</div>
+			</div>
+			
+	    </div>
+   
+   </div>
+   
+</div>
+<!--# } -->
+<!--js pages load-->
+<script src="${ctxPath}/resource/js/plugin/slide.js"></script>
+<script src="${ctxPath}/resource/js/jLamCatCustom.js"></script>
+<script src="${ctxPath}/resource/js/juimin.js"></script>
+<script src="${ctxPath}/resource/js/jquery.ui.datepicker-zh-CN.js"></script>
+<!--js pages part-->
+<script>
+
+
+	function changeTotalPrice()
+	{
+		//alert(document.getElementById("selectType").value);
+		
+		
+		var index = document.getElementById("selectType").selectedIndex;
+        	
+     	var priceTitle=document.getElementById("selectType").options[index].text;
+     	
+     	document.getElementById("pricetype").innerHTML=priceTitle;
+		
+		var begin=document.getElementById("dateBegin").value;
+		var end=document.getElementById("dateEnd").value;
+		
+		//alert(begin+"-----------------------------"+end);
+		
+		var dateBegin=Date.parse(begin);
+		var dateEnd=Date.parse(end);
+		
+		var days;
+		if(dateBegin>=dateEnd)
+		{
+			alert("时间选择错误!请重新选择!");
+			document.getElementById("dateBegin").value="";
+			document.getElementById("dateEnd").value="";
+			days=0;
+			
+		}else
+		{
+			days=(dateEnd-dateBegin)/ 3600 / 1000/24;
+			
+		}
+		
+		//alert(days);
+		
+		var counts=document.getElementById("counts").value;
+		var typeValue=document.getElementById("selectType").value;
+		
+		
+		document.getElementById("lable_price").innerHTML=typeValue/100*counts*days;
+		
+	}
+
+  $(function () {
+  
+  	 var priceSet = JSON.parse($('#priceSet').html());
+  	 //alert(priceSet);
+  	 //alert(JSON.stringify(priceSet));
+  	 
+  	 var index = document.getElementById("selectType").selectedIndex;
+        	
+     var priceTitle=document.getElementById("selectType").options[index].text;
+    	
+     document.getElementById("pricetype").innerHTML=priceTitle;
+  	
+  	 $.each(priceSet, function () {
+     	//alert(this.title+"----"+this.price);
+     	document.getElementById(this.title).value=this.price;
+     	document.getElementById("lable_price").innerHTML=document.getElementById("selectType").value/100;
+     });
+     
+     
+  
+  	 $('.minus').on('click', function () {
+            var $el = $(this).closest('li').find('input');
+            var n = +$el.val() || 0;
+            $el.val(n + 1);
+            
+            changeTotalPrice();
+			
+     });
+        
+     $('.plus').on('click', function () {
+          var $el = $(this).closest('li').find('input');
+          var n = +$el.val() || 0;
+          if (n > 0) {
+              n = n - 1;
+          }
+          $el.val(n);
+          
+          changeTotalPrice();
+
+      });
+  
+	 $('.but1, .but2').click(function () {
+            var pre = $(this).hasClass('but2');
+			
+            if ($('#dateBegin').val() == '点击选择日历' || !$('#dateBegin').val()) {
+	            alert('请选择消费时间');
+	            return;
+        	}
+        	
+        	if ($('#dateEnd').val() == '点击选择日历' || !$('#dateEnd').val()) {
+	            alert('请选择消费时间');
+	            return;
+        	}
+        	
+        	var index = document.getElementById("selectType").selectedIndex;
+        	
+        	var priceTitle=document.getElementById("selectType").options[index].text;
+        	
+        	//alert(priceTitle);
+        	//alert(document.getElementById("lable_price").innerHTML);
+        	//return;
+        	
+            $.post('${ctxPath}/rest/order/save', {
+                goodsID: '${goods.id}',
+                priceSet: JSON.stringify(priceSet),
+                priceTitle: priceTitle,
+                number: $('#counts').val(),
+                beginDate:$('#dateBegin').val(),
+                endDate:$('#dateEnd').val(),
+                price:document.getElementById("lable_price").innerHTML*100,
+                pre: pre
+            }, function (res) {
+                if (pre) {
+                    $('.cartTotal').text(res.total);
+                    alert("已经加入购物车");
+                } else {
+                    location.href = '${ctxPath}/order/' + res.order.id;
+                }
+            });
+        });
+    });
+    
+    $("#dateBegin").datepicker({
+        changeMonth: true,
+        onClose: function (selectedDate) {
+            //if ($("#dateEnd").length) {
+            //    $("#dateEnd").datepicker("option", "minDate", selectedDate);
+            //}
+        },
+        onSelect: function () {
+           changeTotalPrice();
+        }
+        
+        <!--# if (goods.startTime!'' != '') { -->, minDate: '${goods.startTime}'<!--# } -->
+        <!--# if (goods.endTime!'' != '') { -->, maxDate: '${goods.endTime}'<!--# } -->
+         
+    });
+    
+    if ($("#dateEnd").length) {
+        $("#dateEnd").datepicker({
+            defaultDate: "+1d",
+            changeMonth: true,
+            onClose: function (selectedDate) {
+                //$("#dateBegin").datepicker("option", "maxDate", selectedDate);
+            },
+            onSelect: function () {
+                changeTotalPrice();
+            }
+            
+            <!--# if (goods.startTime!'' != '') { -->, minDate: '${goods.startTime}'<!--# } -->
+            <!--# if (goods.endTime!'' != '') { -->, maxDate: '${goods.endTime}'<!--# } -->
+            
+        });
+    }
+
+
+	var dateInput = $("#dateBegin");
+    $(dateInput).focus(function () {
+        if ($(this).val() == this.defaultValue) {
+            $(this).val("").css("color", "#999");
+        }
+    }).blur(function () {
+                if ($(this).val() == '') {
+                    $(this).val(this.defaultValue).css("color", "#999");
+                }
+            });
+    
+    $("#dateBegin").datepicker({
+        changeMonth: true,
+        onClose: function (selectedDate) {
+        	
+        },
+        onSelect: function () {
+            //alert("aaaa");
+        }
+     
+    });
+    
+    var dateInput1 = $("#dateEnd");
+    $(dateInput1).focus(function () {
+        if ($(this).val() == this.defaultValue) {
+            $(this).val("").css("color", "#999");
+        }
+    }).blur(function () {
+                if ($(this).val() == '') {
+                    $(this).val(this.defaultValue).css("color", "#999");
+                }
+            });
+    
+    $("#dateEnd").datepicker({
+        changeMonth: true,
+        onClose: function (selectedDate) {
+        	
+        },
+        onSelect: function () {
+            //alert("aaaa");
+        }
+     
+    });
+</script>
+</body>
+</html>
